@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "primary-fixed": "#dde3ee",
+        "surface-container-highest": "#e0e3e3",
+        "on-primary-container": "#7e848e",
+        "on-background": "#181c1d",
+        "on-secondary": "#ffffff",
+        "on-error": "#ffffff",
+        "on-tertiary-fixed": "#221b00",
+        "secondary-container": "#fe9800",
+        "outline": "#75777c",
+        "secondary": "#8a5100",
+        "on-error-container": "#93000a",
+        "inverse-primary": "#c1c7d2",
+        "primary-fixed-dim": "#c1c7d2",
+        "surface-container-lowest": "#ffffff",
+        "on-tertiary-fixed-variant": "#544600",
+        "surface-container": "#ebeeee",
+        "tertiary-container": "#c9a900",
+        "inverse-on-surface": "#eef1f1",
+        "surface-tint": "#595f68",
+        "on-tertiary-container": "#4c3f00",
+        "primary": "#000000",
+        "tertiary-fixed-dim": "#e8c400",
+        "on-secondary-fixed": "#2c1600",
+        "inverse-surface": "#2d3131",
+        "surface-container-low": "#f1f4f4",
+        "secondary-fixed-dim": "#ffb86f",
+        "error-container": "#ffdad6",
+        "error": "#ba1a1a",
+        "on-secondary-container": "#643900",
+        "on-surface": "#181c1d",
+        "on-primary": "#ffffff",
+        "surface-container-high": "#e6e9e9",
+        "on-primary-fixed-variant": "#414750",
+        "primary-container": "#161c24",
+        "tertiary": "#6f5d00",
+        "surface-bright": "#f7fafa",
+        "on-primary-fixed": "#161c24",
+        "on-secondary-fixed-variant": "#693c00",
+        "tertiary-fixed": "#ffe16b",
+        "background": "#f7fafa",
+        "surface-dim": "#d7dbdb",
+        "on-tertiary": "#ffffff",
+        "outline-variant": "#c5c6cb",
+        "on-surface-variant": "#45474b",
+        "surface": "#f7fafa",
+        "secondary-fixed": "#ffdcbd",
+        "surface-variant": "#e0e3e3"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "space-lg": "1rem",
+        "space-xl": "1.5rem",
+        "margin-md": "1.25rem",
+        "space-md": "0.75rem",
+        "gutter-sm": "0.5rem",
+        "margin-lg": "1.5rem",
+        "space-sm": "0.5rem",
+        "space-2xl": "2rem",
+        "margin": "1rem",
+        "space-xs": "0.25rem",
+        "gutter-lg": "1.25rem",
+        "space-xxs": "0.125rem",
+        "gutter": "1rem"
+      },
+      "fontFamily": {
+        "price-md": ["Inter"],
+        "headline-xl": ["Inter"],
+        "headline-md": ["Inter"],
+        "price-xl": ["Inter"],
+        "headline-lg": ["Inter"],
+        "display-lg": ["Inter"],
+        "label-sm": ["Inter"],
+        "body-md": ["Inter"],
+        "body-sm": ["Inter"],
+        "label-md": ["Inter"],
+        "title-sm": ["Inter"],
+        "title-md": ["Inter"],
+        "display-lg-mobile": ["Inter"],
+        "price-xl-mobile": ["Inter"]
+      },
+      "fontSize": {
+        "price-md": ["18px", {"lineHeight": "22px", "fontWeight": "500"}],
+        "headline-xl": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+        "headline-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+        "price-xl": ["28px", {"lineHeight": "32px", "fontWeight": "500"}],
+        "headline-lg": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+        "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+        "label-md": ["13px", {"lineHeight": "18px", "fontWeight": "500"}],
+        "title-sm": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+        "title-md": ["16px", {"lineHeight": "22px", "fontWeight": "600"}],
+        "display-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+        "price-xl-mobile": ["22px", {"lineHeight": "26px", "fontWeight": "600"}]
+      }
+    }
+  }
+};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><header class="fixed top-0 left-0 w-full z-50 shadow-[0_2px_8px_rgba(0,0,0,0.12)]"><div class="h-16 bg-primary-container px-space-md lg:px-space-xl flex items-center justify-between gap-space-md text-on-primary"><div class="flex items-center gap-space-lg flex-shrink-0"><a class="flex items-center gap-space-xs p-space-xs rounded hover:outline hover:outline-1 hover:outline-primary-fixed" data-path="home" href="#"><img alt="ShopSphere Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCVF_KWw56LzMMSlENPqWbYGE2O-rDvV2032bJG_jUpf9oT7PG-BJwiFvy003-lulftKqNAAzs5d3Tb2_Nij6bEZTA1AasqgGGsQmWhphnxr7ci9eCgN8TIazgAw0SBfRtJ46IUKQimcuCA9pMXdGqelhby674iBd_8ZI71h--fJxWE8wwCz2nRVNvXFQtKzc-wSTPjaXsCflYYA-NhnGqh4aq3C8dYo60_r1n4IqQh"/><span class="font-headline-md text-headline-md tracking-tight text-on-primary hidden sm:inline-block">ShopSphere<span class="font-label-sm text-label-sm text-secondary-container ml-space-xxs font-bold">.in</span></span></a><div class="hidden xl:flex items-center gap-space-xs p-space-xs rounded cursor-pointer hover:outline hover:outline-1 hover:outline-primary-fixed transition-all"><span class="material-symbols-outlined text-[20px] text-on-primary">location_on</span><div class="flex flex-col text-left leading-tight"><span class="font-label-sm text-label-sm text-outline-variant font-normal">Deliver to Rahul</span><span class="font-title-sm text-title-sm font-semibold text-on-primary">Bengaluru 560001</span></div></div></div><div class="flex-1 max-w-[820px] mx-space-sm hidden md:flex"><div class="flex w-full h-10 rounded-xl overflow-hidden focus-within:ring-2 focus-within:ring-secondary-container"><button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md px-space-md flex items-center gap-space-xxs border-r border-outline-variant/30 flex-shrink-0 transition-colors" type="button"><span class="truncate max-w-[110px]">All Categories</span><span class="material-symbols-outlined text-[16px]">arrow_drop_down</span></button><input class="w-full px-space-md bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none" placeholder="Search ShopSphere.in — Electronics, Mobiles, Fashion &amp; more" type="text"/><button class="bg-secondary-container hover:bg-secondary-fixed-dim text-on-secondary-container px-space-xl flex items-center justify-center flex-shrink-0 transition-colors" type="button"><span class="material-symbols-outlined text-[22px] font-bold">search</span></button></div></div><div class="flex items-center gap-space-xs sm:gap-space-sm flex-shrink-0 text-on-primary"><div class="hidden lg:flex items-center gap-space-xxs p-space-xs rounded cursor-pointer hover:outline hover:outline-1 hover:outline-primary-fixed transition-all"><span class="font-label-sm text-label-sm font-bold bg-surface-container-lowest text-on-surface px-space-xxs rounded">IN</span><span class="font-title-sm text-title-sm font-semibold">EN / ₹ INR</span><span class="material-symbols-outlined text-[16px] text-outline-variant">arrow_drop_down</span></div><a class="flex items-center gap-space-xs p-space-xs rounded cursor-pointer hover:outline hover:outline-1 hover:outline-primary-fixed transition-all" data-path="account-settings" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr2mMCTINyv_GP05-EIHffwEXQoCOKLbmc2X6rNplUWVaPRxQphxA57o6hXQnYJYJSeEFZpiol4g4Q4JWCKd0X5kiatmsu2Mhw9Ces4yw4F5NLlsBO2QaIXUuvtKfcXcnGhNXP20vmk9tPQ5gm7Up4_gpVYKxyoqP62sGRvMXuYKi_bXwsjkjzVFaxlLQjB_4I0_aQYJPCZR32xB5aaUYwayfPpz3IVbQLcBpCW-s"/><div class="hidden sm:flex flex-col text-left leading-tight"><span class="font-label-sm text-label-sm text-outline-variant font-normal">Hello, Rahul</span><span class="font-title-sm text-title-sm font-semibold flex items-center text-on-primary">Account &amp; Lists<span class="material-symbols-outlined text-[16px] text-outline-variant">arrow_drop_down</span></span></div></a><a class="hidden sm:flex flex-col text-left p-space-xs rounded cursor-pointer hover:outline hover:outline-1 hover:outline-primary-fixed transition-all leading-tight" data-path="order-history" href="#"><span class="font-label-sm text-label-sm text-outline-variant font-normal">Returns</span><span class="font-title-sm text-title-sm font-semibold text-on-primary">&amp; Orders</span></a><a class="flex items-center gap-space-xs p-space-xs rounded cursor-pointer hover:outline hover:outline-1 hover:outline-primary-fixed transition-all" data-path="shopping-cart" href="#"><div class="relative flex items-center"><span class="material-symbols-outlined text-[30px] text-on-primary">shopping_cart</span><span class="absolute -top-1 right-1 bg-secondary-container text-on-secondary-container font-headline-md text-[11px] h-4 w-4 rounded-full flex items-center justify-center font-bold">3</span></div><div class="hidden md:flex flex-col text-left leading-tight"><span class="font-label-sm text-label-sm text-outline-variant font-normal">Total</span><span class="font-title-sm text-title-sm font-bold text-secondary-fixed-dim">₹4,899</span></div></a></div></div><div class="h-10 bg-inverse-surface px-space-md lg:px-space-xl flex items-center justify-between text-on-primary shadow-inner"><div class="flex items-center gap-space-md overflow-x-auto overflow-y-hidden no-scrollbar py-space-xxs flex-1"><button class="flex items-center gap-space-xxs text-on-primary font-title-sm text-title-sm px-space-xs py-space-xxs rounded hover:outline hover:outline-1 hover:outline-primary-fixed flex-shrink-0" type="button"><span class="material-symbols-outlined text-[20px]">menu</span><span>All</span></button><nav class="flex items-center gap-space-md flex-shrink-0" data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded"><a class="font-label-md text-label-md text-inverse-on-surface hover:text-on-primary whitespace-nowrap px-space-xs py-space-xxs rounded transition-colors" data-path="todays-deals" href="#">Today's Deals</a><a class="font-label-md text-label-md text-inverse-on-surface hover:text-on-primary whitespace-nowrap px-space-xs py-space-xxs rounded transition-colors" data-path="electronics" href="#">Electronics</a><a class="font-label-md text-label-md text-inverse-on-surface hover:text-on-primary whitespace-nowrap px-space-xs py-space-xxs rounded transition-colors" data-path="mobiles" href="#">Mobiles</a><a class="font-label-md text-label-md text-inverse-on-surface hover:text-on-primary whitespace-nowrap px-space-xs py-space-xxs rounded transition-colors" data-path="fashion" href="#">Fashion</a><a class="font-label-md text-label-md text-inverse-on-surface hover:text-on-primary whitespace-nowrap px-space-xs py-space-xxs rounded transition-colors" data-path="home-kitchen" href="#">Home &amp; Kitchen</a><a class="font-label-md text-label-md text-inverse-on-surface hover:text-on-primary whitespace-nowrap px-space-xs py-space-xxs rounded transition-colors" data-path="prime-fast-delivery" href="#">Prime &amp; Fast Delivery</a><a class="font-label-md text-label-md text-inverse-on-surface hover:text-on-primary whitespace-nowrap px-space-xs py-space-xxs rounded transition-colors" data-path="books" href="#">Books</a><a class="font-label-md text-label-md text-inverse-on-surface hover:text-on-primary whitespace-nowrap px-space-xs py-space-xxs rounded transition-colors" data-path="sports-fitness" href="#">Sports &amp; Fitness</a><a class="font-label-md text-label-md text-inverse-on-surface hover:text-on-primary whitespace-nowrap px-space-xs py-space-xxs rounded transition-colors" data-path="customer-service" href="#">Customer Service</a><a class="font-label-md text-label-md text-inverse-on-surface hover:text-on-primary whitespace-nowrap px-space-xs py-space-xxs rounded transition-colors" data-path="new-releases" href="#">New Releases</a><a class="font-label-md text-label-md text-inverse-on-surface hover:text-on-primary whitespace-nowrap px-space-xs py-space-xxs rounded transition-colors" data-path="sell-on-shopsphere" href="#">Sell on ShopSphere</a></nav></div><div class="hidden 2xl:flex items-center gap-space-xs flex-shrink-0 pl-space-md"><span class="font-label-sm text-label-sm font-semibold text-secondary-fixed bg-secondary/40 px-space-sm py-space-xxs rounded border border-secondary-container/40 flex items-center gap-space-xxs"><span class="material-symbols-outlined text-[16px] text-secondary-container">local_fire_department</span>Great Indian Shopping Festival • Up to 70% Off</span></div></div></header><main class="w-full pt-[104px] bg-surface min-h-[calc(100vh-104px)]"><div class="flex flex-col w-full">
+<!-- Top Ambient Banner Container & Hero Area -->
+<section class="relative w-full overflow-hidden bg-gradient-to-b from-primary-container via-surface-container-high to-surface pt-space-md pb-space-2xl">
+<!-- Background festive ambient glow rings -->
+<div class="absolute -top-32 left-1/4 w-[600px] h-[600px] bg-secondary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-10 right-10 w-[450px] h-[450px] bg-tertiary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="max-w-[1500px] mx-auto px-space-md lg:px-space-xl">
+<!-- Main Promotional Hero Billboard -->
+<div class="relative w-full rounded-xl overflow-hidden shadow-xl bg-surface-container-lowest">
+<div class="grid grid-cols-1 lg:grid-cols-12 min-h-[440px] items-stretch">
+<!-- Left Content Column -->
+<div class="lg:col-span-7 flex flex-col justify-between p-space-xl lg:p-space-2xl z-10 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/95 to-transparent">
+<div>
+<div class="flex flex-wrap items-center gap-space-xs mb-space-sm">
+<span class="inline-flex items-center gap-space-xxs bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-space-sm py-space-xxs rounded-full uppercase tracking-wider font-bold shadow-sm">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+                  Great Indian Shopping Festival
+                </span>
+<span class="inline-flex items-center gap-space-xxs bg-primary text-on-primary font-label-sm text-label-sm px-space-sm py-space-xxs rounded-full">
+<span class="material-symbols-outlined text-[13px]">bolt</span>
+                  Live Now
+                </span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight leading-tight mb-space-sm">
+                MEGA ELECTRONICS &amp; HOME SALE
+                <span class="block text-secondary-container">UP TO 75% OFF</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[540px] mb-space-md">
+                Top brands: Sony, Apple, Samsung, OnePlus &amp; Prestige. Instant 10% Bank Discount on HDFC &amp; ICICI Bank Cards, plus No-Cost EMI up to 12 months.
+              </p>
+<!-- Bank strip badges -->
+<div class="flex flex-wrap items-center gap-space-xs mb-space-lg">
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">credit_card</span>
+<span>10% Instant Discount on HDFC Cards</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">account_balance</span>
+<span>Flat ₹3,000 off on ICICI NetBanking</span>
+</div>
+</div>
+</div>
+<!-- CTA Cluster -->
+<div class="flex flex-wrap items-center gap-space-md">
+<a class="inline-flex items-center gap-space-xs bg-secondary-container hover:bg-secondary-fixed-dim text-on-secondary-container font-title-sm text-title-sm font-bold px-space-xl py-space-sm rounded-lg transition-transform active:scale-95 shadow-md" href="#">
+<span>Shop Today's Deals</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-space-xs bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-title-sm text-title-sm px-space-lg py-space-sm rounded-lg transition-colors" href="#">
+<span>Explore New Launches</span>
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+</a>
+</div>
+</div>
+<!-- Right Promotional Showcase Image Column -->
+<div class="lg:col-span-5 relative flex items-center justify-center p-space-lg min-h-[300px] lg:min-h-full overflow-hidden bg-gradient-to-tr from-surface-container-high via-surface to-surface-container-highest">
+<img class="w-full h-full object-contain max-h-[380px] drop-shadow-2xl transition-transform duration-500 hover:scale-105" data-alt="Vibrant modern showcase of flagship consumer electronics including slim matte-black noise-cancelling headphones, high-end metallic smartphone, sleek tablet with stylus, and stainless steel espresso machine against warm golden festive lighting and amber highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwgfvNlCxkNFxfyUwIUuWWXpuZMLrdtV3OkDieBx6dEQr7pRfcVU2gpDI-PKAON7gpmMZioO91U5iP5WROW0IR4-rFVBssdpWq_JLJ5b2_a8sy0YjHa70B-doNixgJsivTKF8NuHTUiLvmYm8vRAurQu7bse3azpm35pRTAZqsYuODL4Tl1GhsBc3Ze549OsxmYfRRiPBHIOVELfzHdPQ2hVz5AW97Kz8UGGp3ctM"/>
+<!-- Floating Offer Pill -->
+<div class="absolute top-6 right-6 bg-surface-container-lowest/90 backdrop-blur-md px-space-md py-space-xs rounded-xl shadow-lg flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">percent</span>
+</div>
+<div class="text-left">
+<div class="font-label-sm text-label-sm text-on-surface-variant leading-none">Deal of the Hour</div>
+<div class="font-title-sm text-title-sm text-on-surface font-bold">Extra ₹2,500 Coupon</div>
+</div>
+</div>
+<!-- Mini stats pill -->
+<div class="absolute bottom-6 left-6 bg-surface-container-lowest/90 backdrop-blur-md px-space-md py-space-xs rounded-xl shadow-lg flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">100% Genuine Marketplace</span>
+</div>
+</div>
+</div>
+<!-- Carousel navigation arrows & indicator strip -->
+<div class="absolute bottom-4 right-1/2 translate-x-1/2 lg:right-6 lg:translate-x-0 flex items-center gap-space-xs z-20 bg-surface-container-lowest/80 backdrop-blur-sm px-space-xs py-space-xxs rounded-full shadow-sm">
+<button aria-label="Previous Slide" class="w-7 h-7 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<div class="flex items-center gap-1.5 px-space-xs">
+<span class="w-5 h-1.5 rounded-full bg-secondary-container"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+</div>
+<button aria-label="Next Slide" class="w-7 h-7 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Quick Trust & Value Feature Badges Overlay Strip -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md -mt-4 relative z-20">
+<div class="flex items-center gap-space-sm bg-surface-container-lowest rounded-xl p-space-md shadow-md hover:shadow-lg transition-shadow">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">electric_bolt</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-bold truncate">Fast 1-Day Delivery</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">To 19,000+ Pin codes</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-lowest rounded-xl p-space-md shadow-md hover:shadow-lg transition-shadow">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-bold truncate">Pay on Delivery</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Cash or UPI at doorstep</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-lowest rounded-xl p-space-md shadow-md hover:shadow-lg transition-shadow">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">assignment_return</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-bold truncate">7 Days Replacement</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">No questions asked</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-lowest rounded-xl p-space-md shadow-md hover:shadow-lg transition-shadow">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">security</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-bold truncate">Brand Warranty</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">100% Authorized sellers</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Spotlight Circular / Card Bar -->
+<section class="w-full max-w-[1500px] mx-auto px-space-md lg:px-space-xl py-space-xl">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold">Explore Popular Categories</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Handpicked collections refreshed every hour</p>
+</div>
+<a class="font-label-md text-label-md font-semibold text-secondary hover:underline flex items-center gap-space-xxs" href="#">
+<span>View all 48 departments</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-space-md">
+<!-- 1: Electronics -->
+<a class="group flex flex-col items-center bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all" href="#">
+<div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center p-2 mb-space-xs overflow-hidden group-hover:scale-105 transition-transform">
+<img class="w-full h-full object-contain" data-alt="High tech wireless headphones and digital mirrorless camera arrangement on clean minimalist studio grey backdrop with warm diffused backlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzq7GWzDJ7WLt1eUnvBS9WQwVp38ajgenIOsippE3neNB6SE03LOEmO7VD-lzjNx-6T7ilWM70TOSg4QIXRh6K7Eecf2xxps_QfbxkN0z9p2Rcxj1i_NfzWwMnWouh5XyN2Ix0_8iNOWvOaW9WXtyBHUd6UjOt_B46sGTWi5HNe7alEhoSEy_uWiUTJjs_0A9yVraZbh9GVQruWIwzlFqgH6zpqgtugyYrHT9pGdY"/>
+</div>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold text-center truncate w-full">Electronics</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Min 40% Off</span>
+</a>
+<!-- 2: Mobiles -->
+<a class="group flex flex-col items-center bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all" href="#">
+<div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center p-2 mb-space-xs overflow-hidden group-hover:scale-105 transition-transform">
+<img class="w-full h-full object-contain" data-alt="Sleek modern flagship smartphone front and back views showing triple camera lens setup on subtle warm background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwuOgt7KU2N5ENwvNVwYqMqTXAzpkSka6xzsEFb_a9cS90Wrwv8hFGfSqcBncCUaHks0ajTgyVWHMujI-d4H5KThh964vDFux8WhIXs0CJt_bAxwvlnIVVsrL4By0C2c-qAaobyNZ1x-NOOWu5ifpwUZYFPqS5euUPxQKhuGJIMzEd3meP7Jy8iv3dRg5FcQhPlDu9jvEGLqLacj4W47zTmfTIIu_WPaJcItXixHY"/>
+</div>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold text-center truncate w-full">Mobiles</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">From ₹6,999</span>
+</a>
+<!-- 3: Fashion -->
+<a class="group flex flex-col items-center bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all" href="#">
+<div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center p-2 mb-space-xs overflow-hidden group-hover:scale-105 transition-transform">
+<img class="w-full h-full object-contain" data-alt="Folded luxury cotton linen shirts, modern watch and sneakers isolated against soft neutral clean background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTQiiWIG18xmo6xYAaX_jDrG9l2W8lzCLl-LrDwCEGpV9YGH9ZAGA6Tdplty-MyFUelD2ZR1JEWJca191TjX58lIsNQclfhoZ0b-BYbVG7mKRZPK0ag1x3zGg2APaqZ1DCxmmeTGfLDN4xHCm810Dkb_LA74YR8dYHm6l3kBU2S31SUiIKTNSlQ0_zupa-Ezwu87fK1E5t6xx3cB1GYd9KPDfpzFxl2f9g2xhD7Vs"/>
+</div>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold text-center truncate w-full">Fashion</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">50-80% Off</span>
+</a>
+<!-- 4: Home & Kitchen -->
+<a class="group flex flex-col items-center bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all" href="#">
+<div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center p-2 mb-space-xs overflow-hidden group-hover:scale-105 transition-transform">
+<img class="w-full h-full object-contain" data-alt="Cast iron Dutch oven cookware and wooden spice grinders arranged gracefully on a marble countertop with soft warm lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo3-EmwiIcL52RZ7op5y75DbWK7AaeF5FoSYYZjUi5G4mBdFdVATu_tuws8Y3ZuRnJ3WIdaD-bEPeUG9cOp66nT6wEltpwej1rJaZFBCKjsffPYjclw9gxS18TQu24jIUtYWOFjgdxUmZHpzyGHbpbFBu-VUzNJ6FILLpyXXWphJZr7xM0ckO-JLxqpyL1VDjifZsXcOZijN6XIMma15LM02OyKM4_pcYtQeLxtuA"/>
+</div>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold text-center truncate w-full">Home &amp; Kitchen</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Up to 70% Off</span>
+</a>
+<!-- 5: Beauty & Grooming -->
+<a class="group flex flex-col items-center bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all" href="#">
+<div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center p-2 mb-space-xs overflow-hidden group-hover:scale-105 transition-transform">
+<img class="w-full h-full object-contain" data-alt="Organic skincare bottles, face serum dropper, and precision electric trimmer on gentle pastel stone surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxqdK5Lo2aVCjGlojVQdkGjbQJwJeQ4rgn2AefJnYbLPIaOBddOvrZ-l52jQ_6XUYF5_h006MHcOHqSBM5g7H9L7CfiobM754PmCIFLimISSRHmgz0gNcSeGKvNVs54AWGOLWxUzl2Hr6KLc8-KNJsfERgBmth4y4iI8d1A9CA7mpzR-Si0CiZAju_GovqADyh6EFp57u4Um1Z5t0XYMzL5BAAi2HH9YIt7ILHvaI"/>
+</div>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold text-center truncate w-full">Beauty</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Starting ₹199</span>
+</a>
+<!-- 6: Books & Media -->
+<a class="group flex flex-col items-center bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all" href="#">
+<div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center p-2 mb-space-xs overflow-hidden group-hover:scale-105 transition-transform">
+<img class="w-full h-full object-contain" data-alt="Stack of best-selling hardcover novels and e-reader tablet on warm oak table beside ceramic coffee mug." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEeptd4aFE4MXyDM0e54-YMtvJWPL6x-iOEGe_0vN5NQjW55vJu9Sant_43ZxlAl3NXkvQnlhxI53riT_R-zkeWqa3Kgy7pmbtlpUHQwkgxloZg1KATfubtJKn4YXH0Apodk2R3rF7k0rkAp-RM3AIr1z8cR-hZgpNqcbeY4VaBTbihsIZTRN6ITlcmsCzAba8o-7kCaBlg1bOf92Wi9vtnQCot1nPcQjgxKzr6QY"/>
+</div>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold text-center truncate w-full">Books &amp; Media</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Flat 45% Off</span>
+</a>
+<!-- 7: Sports & Fitness -->
+<a class="group flex flex-col items-center bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all" href="#">
+<div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center p-2 mb-space-xs overflow-hidden group-hover:scale-105 transition-transform">
+<img class="w-full h-full object-contain" data-alt="Cast iron kettlebell, stainless steel sports shaker, and high-traction yoga mat on clean gym flooring." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcCRsvkmJ6wplqc7-c83IhKZtHOMRYU5h6ZW1Z2qE74K2linTCVNe-JVwt5AnPiUQakhAyj5xxjj8oO2CmxvjiNKaWFN8ulz0zp-I66iP2w4AM5JZzNleqzR9-5wl9trelveOaFNbHOTDr0s6MBw19p37hlUbgVX-LNqLpFg56ynCzVSSYg8xpsP7_WTPNfxIn0mqdl-Fjq1Rg1sxEAwce7JJ11fcIaZCeoub9vi4"/>
+</div>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold text-center truncate w-full">Sports</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Min 35% Off</span>
+</a>
+<!-- 8: Gaming & Consoles -->
+<a class="group flex flex-col items-center bg-surface-container-lowest p-space-sm rounded-xl shadow-sm hover:shadow-md transition-all" href="#">
+<div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center p-2 mb-space-xs overflow-hidden group-hover:scale-105 transition-transform">
+<img class="w-full h-full object-contain" data-alt="Ergonomic wireless gaming controller and backlit mechanical gaming keyboard on clean graphite surface with ambient neon rim." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD3o4LJVYZ5jn6K1lSmHmErhy63j2KymD5HsSDK1RuT6EHi7vZNg2e7FTpyZol1LlNW0oJaIV4QmCutSWJTRg4SBp6LumkSjhX3RSo2A0j1kOPy5cMC5IVpm6Wxxk0GXSbKB4b9TklrIUvphkPUZGLlKrQ73e-uWOdZDQKHj6yR38ika3svR_iwi_-D7PeU42FlU5aRdsVCMn71QQsNl9T9oKGaskkj9zTzqSDGA8"/>
+</div>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold text-center truncate w-full">Gaming</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Extra ₹1,500 Off</span>
+</a>
+</div>
+</section>
+<!-- Quad-Card Multi-Item Feature Grid (Classic Amazon-Style Discovery Bento) -->
+<section class="w-full max-w-[1500px] mx-auto px-space-md lg:px-space-xl py-space-sm">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Quad Card 1: Revamp your home in style -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-space-xs">Revamp your home in style</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Handcrafted decor &amp; living essentials</p>
+<div class="grid grid-cols-2 gap-space-sm">
+<a class="flex flex-col group" href="#">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden p-2 flex items-center justify-center">
+<img class="w-full h-full object-cover rounded group-hover:scale-105 transition-transform" data-alt="Crisp Egyptian cotton double bedsheet set in warm beige linen texture with matching pillow covers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4YV6LTcS_9lpKCx4LC2uEXjf5MawvQ8kjy3m4cwzvvgt81Qt3CdxPufbjyFKleONOuj2TvoS0JYNRe0qedTQKRlhEDvRzQLfPrL6DCj7y9dZMGxy0U2qxjfkqi6VFgR4169rhd5kSbcd1whLUQT-k974PP9SZ86rZHKQ-ZvejRPse_2iPghOoLER0vXzsgZReGGq21ePxaGR9Afi3dMqlxUY0tGO0qEPLYwhHMmg"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-medium mt-1 truncate">Bedding Sets</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">From ₹499</span>
+</a>
+<a class="flex flex-col group" href="#">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden p-2 flex items-center justify-center">
+<img class="w-full h-full object-cover rounded group-hover:scale-105 transition-transform" data-alt="Minimalist framed canvas wall art depicting Scandinavian botanical patterns on neutral grey wall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAnSEWFZZrsdo8ZqXU3jWIf_RgLYrTO6jDx1eyz4feE6F1aib6UwbO0D1MUO4SP4UvzscSuVKWr6u0vqOd49FwS0AuMMA9z6ZybGxMSsMZmYeEoSXCo7VXZzQ5UiqCfjBMkwVqm3g8Izb_eBXFIbrl1en00wYEiKoAWuW-fDOSJNQBcqg4XEoBHlGwnV72romn0S8qYUDROvenLTdgAeky30voMtwrArntovtoMDg"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-medium mt-1 truncate">Canvas Wall Art</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Starting ₹299</span>
+</a>
+<a class="flex flex-col group" href="#">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden p-2 flex items-center justify-center">
+<img class="w-full h-full object-cover rounded group-hover:scale-105 transition-transform" data-alt="Set of 6 airtight borosilicate glass jars with natural acacia wooden lids filled with gourmet grains." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFhMg5zk7kVHThoyymm6Wv9swPui9FYQ2446flSApVMGDeo-JVZ7kIDkP9CaEJmz-wVxW_ZIH1qQDbV4R-jnLwoYqULn2aAZkd_cjeIvF2gpYQwn2MDmuXTh-C3E5keYusUwxR1gypxgtUlOkraBW3rr79lQNRbv6fPb3oI357NEOG-l9FEyGms0SJ4eENfMgDe0Tnp5udtwX9tgTy2s63dcNgsGjrQjsDPDsURG8"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-medium mt-1 truncate">Kitchen Storage</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">From ₹399</span>
+</a>
+<a class="flex flex-col group" href="#">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden p-2 flex items-center justify-center">
+<img class="w-full h-full object-cover rounded group-hover:scale-105 transition-transform" data-alt="Modern sculptural LED bedside night lamp with warm dimmable illumination on polished wooden nightstand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd6WGArHXGnK7dELpQQ-Eo0Nb_YltR6_nphv4Xwyt7NU6bv4hXx-Xy1snEN1eNLzSJl0M2PfZTsViOSFPjBAfmECdXhLCwoOyB_xpbsa--7fx9xizg0gs6i_dv_9ymPKDkeHbmNH4wW3BIkUCJvFwaLx7nNU95Bm8kOr9LI217TnOMvRMVBx-D1X8j4W7gMaiN6KGDf_P9H4czYi_pW695vacq1Oqyj1VpU80tv8A"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-medium mt-1 truncate">Ambient Lamps</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Under ₹999</span>
+</a>
+</div>
+</div>
+<a class="mt-space-md font-label-md text-label-md font-semibold text-secondary hover:underline flex items-center gap-space-xxs" href="#">
+<span>See more home decor</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Quad Card 2: Refurbished & Open-box tech -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold">ShopSphere Certified</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-space-xs">Up to 60% off | Refurbished</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Tested with 6-month brand warranty</p>
+<div class="grid grid-cols-2 gap-space-sm">
+<a class="flex flex-col group" href="#">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden p-2 flex items-center justify-center">
+<img class="w-full h-full object-cover rounded group-hover:scale-105 transition-transform" data-alt="Slim metallic ultrabook laptop open showing vibrant display with reflection on dark desk." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsLiKwbdTBWzS7MwJeUIMAJ0Z1UkPUi9OJme-Hq94fJzlRdSRdMf0tJvtnSKlOMwi_47Jwxny1MRZoczlAQuR6CGCOLUh8jXpHQZIAzbGndA61ffZmS4wUpJmgfTsTH1b5fHr9dAQ96hyUUgs9c9NC1FDKdSp7aZYodU6sbufd0zDxW-3bpug_WUUDB3r1bIDdT7niUHmmpb1q4WNZ2PtfZcS-ftY1JeaCVV8MzfU"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-medium mt-1 truncate">Laptops</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">From ₹18,990</span>
+</a>
+<a class="flex flex-col group" href="#">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden p-2 flex items-center justify-center">
+<img class="w-full h-full object-cover rounded group-hover:scale-105 transition-transform" data-alt="Refurbished premium 11-inch digital tablet with high-resolution touchscreen on clean office workspace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTwIojmXtMbBsVu9rVB5Do0EMWoYnYXAILfnU3AA5XeeI2OgUgwSu5oaSxggBCPuO-B20RSA7PU7aSbNe9BY7If23cqk9tOaWzeoggjXymFCO6elibeaVqrVLmq5pHe80_WCQNCIiJ-DRF6AiII8s4-x-QaqUpEsUif4htt0ycBK0RDSeDghsBv3FTV8OKFcBagIcif92rjTB03IsEheCTDx3cjSeUZPo-7E4l1u0"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-medium mt-1 truncate">Tablets</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Min 40% Off</span>
+</a>
+<a class="flex flex-col group" href="#">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden p-2 flex items-center justify-center">
+<img class="w-full h-full object-cover rounded group-hover:scale-105 transition-transform" data-alt="Luxury smart fitness watch with black sport loop band resting on clean metallic charging dock." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKZRkx1vai2JXGTXXzpsmHivW8sonGJzdr006_i08bvu4jXvOLYeUs17CY1weeWySStEhASmUhGGCsWzoKaKd9bxMBtxd_qA5uK6b6r9zaqgb-gpk7gX3yWFpYGQo8tbcQh0nwR6ArzXSUXIgmfSJea1V3Tuh7foT6BcrWSBeL3uzOn5w4dOio8hIjgMctxmYtJcot0ZBGYfX7KZ_-3jo63KKWA-fqYIhU0-9gF-M"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-medium mt-1 truncate">Smartwatches</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">From ₹1,499</span>
+</a>
+<a class="flex flex-col group" href="#">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden p-2 flex items-center justify-center">
+<img class="w-full h-full object-cover rounded group-hover:scale-105 transition-transform" data-alt="Pair of true wireless stereo earbuds with open charging case on modern marble table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhVanYCy1fnroFT9GjZ1x2I_8HD3SyZc74eV3ij1k0USGI-zh8tr3Av-BvJm6RkhSDgO4Swkjt2EUdJJ2oBsAWx2v8M3TutU4Zw6YdT9WXLMkIN2V2bQ0W11xo5-OFhgsM0Dihudx9SYYXZyJeFlIZjvcoPpjZvmGxcHO8aOf5qsvDhB1SEUevrpV2Nu53cqA9uZXN0FjNTBFRLET4vr0zsr_5PaKA1Rp6oAcM0hg"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-medium mt-1 truncate">Audio &amp; TWS</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Starting ₹799</span>
+</a>
+</div>
+</div>
+<a class="mt-space-md font-label-md text-label-md font-semibold text-secondary hover:underline flex items-center gap-space-xxs" href="#">
+<span>Discover certified gadgets</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Quad Card 3: Automotive & DIY Essentials -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-space-xs">Automotive &amp; Tools</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Professional grade gear for road &amp; garage</p>
+<div class="grid grid-cols-2 gap-space-sm">
+<a class="flex flex-col group" href="#">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden p-2 flex items-center justify-center">
+<img class="w-full h-full object-cover rounded group-hover:scale-105 transition-transform" data-alt="Digital tire inflator air compressor with LED gauge connected near car wheel rim." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABMvgQY5npRz1HZVfh30z37NMHl5V8cTBnt8RRX3trT7G464drdlmV0cwR_ZxroddSTgXsY4iqiVTWxxGseyVrkvyrPAKq_xEgPiVw0cesqJVsF8ofBdq9pgU5cCO-QhF5zHJCTYBkOgLLY-GBrUnz0GJh6rrvWPuE47qAyzTqchIa212440gdy2aMDBWWAWOzJXybatewpWaalB8sQvmi0jpOvrQ5Wldf4CCEHoM"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-medium mt-1 truncate">Car Inflators</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">From ₹1,299</span>
+</a>
+<a class="flex flex-col group" href="#">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden p-2 flex items-center justify-center">
+<img class="w-full h-full object-cover rounded group-hover:scale-105 transition-transform" data-alt="High pressure water washer machine with spray nozzle lance on clean driveway." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW_3HL4wcGyd07zprih-O7ty_V83p1Ktx1PDCUY6ii8oUyOQ8NfL7JUYZT44Sg3tJ7OY1x52cmuJ8FZPg2aFSbewA9tVpbaWOKEDWphvjr93Wysv-0Ja0AUQxuJtxb5nU6JJdfOkVywCZ9QNmGX5l2A8-k7XucwQP7TOlY1UqctXiAVAiLGi1LbVFrFbOboyZatZBsE2B2fk5gjBtbtqHwjsWfO0qO6EX_AOsAG8g"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-medium mt-1 truncate">Pressure Washers</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Up to 55% Off</span>
+</a>
+<a class="flex flex-col group" href="#">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden p-2 flex items-center justify-center">
+<img class="w-full h-full object-cover rounded group-hover:scale-105 transition-transform" data-alt="Cordless lithium-ion power drill with magnetic bits kit in rugged carry case." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-tyzV38UXQi05xF4yyVme2ur59ojeWCo-P3Y98ZkJDyv2ox0fXxci7gimgDwbF70snoL7S-LNoT_A0lxD6B6XfKUSXVVYtezSeeO7jRVHDrC9JL8922sQkTxjRyhbqjYNYzXOyCPxaGCwxQWvsVL1dubhtSUJHWGS3TwbRKjy0YEWb0QnubDy1d3-Q4rXBsah-58E-8fkYtYni-TnjXToqALggkqGS5jBIMo26ws"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-medium mt-1 truncate">Power Drills</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Starting ₹1,699</span>
+</a>
+<a class="flex flex-col group" href="#">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden p-2 flex items-center justify-center">
+<img class="w-full h-full object-cover rounded group-hover:scale-105 transition-transform" data-alt="Aerodynamic matte black motorcycle full-face helmet with sun visor on polished concrete." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi5U50TDI0zT_Wa58xbo_3Bc4GZxQAlgRFP-PLPL4U3c0moVXJ8KyDcuN-68-mZ6cUcDsJRpro21iDVQj6fTfBUVjlzvoGF4_aJx2Kq6MqKT1jn0t4VGUuxcIjL9ROgjII90TJqa8asxGihd3kdC78thVrqQ1vUMBUfe3fNJXJ4bLAj51wi2hzErvuBrnM_-5Cc32ee3d5L1t7mDSHoEyGhB1OyERIS74UiFHkdLU"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-medium mt-1 truncate">Riding Helmets</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">DOT Certified</span>
+</a>
+</div>
+</div>
+<a class="mt-space-md font-label-md text-label-md font-semibold text-secondary hover:underline flex items-center gap-space-xxs" href="#">
+<span>Explore vehicle care</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Card 4: Prime Membership Spotlight Card -->
+<div class="bg-gradient-to-br from-primary-container via-surface-container-high/40 to-surface-container-highest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between text-on-primary">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold px-space-sm py-0.5 rounded">
+              SHOPSPHERE PRIME
+            </span>
+<span class="material-symbols-outlined text-secondary-container text-[24px]">verified</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold mb-space-xs">
+            Unlock fast free shipping &amp; streaming
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            Join over 12 million members across India for VIP privileges.
+          </p>
+<div class="flex flex-col gap-space-xs bg-surface-container-lowest/80 backdrop-blur-sm p-space-sm rounded-lg mb-space-md text-on-surface shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">done_all</span>
+<span class="font-body-sm text-body-sm font-medium">Free Guaranteed 1-Day &amp; Same-Day</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">done_all</span>
+<span class="font-body-sm text-body-sm font-medium">ShopSphere Video: 4K Blockbusters</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">done_all</span>
+<span class="font-body-sm text-body-sm font-medium">30-Minute Early Access to Lightning Deals</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">done_all</span>
+<span class="font-body-sm text-body-sm font-medium">5% Unlimited Cashback on ICICI Card</span>
+</div>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs mb-space-sm">
+<span class="font-price-xl text-price-xl text-primary font-bold">₹1,499</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ year (or ₹299/mo)</span>
+</div>
+<button class="w-full bg-secondary-container hover:bg-secondary-fixed-dim text-on-secondary-container font-title-sm text-title-sm font-bold py-space-sm rounded-lg transition-transform active:scale-95 shadow-md flex items-center justify-center gap-space-xxs">
+<span>Join Prime Now</span>
+<span class="material-symbols-outlined text-[18px]">stars</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Horizontal Product Carousel 1: Lightning Deals with Live Countdown -->
+<section class="w-full max-w-[1500px] mx-auto px-space-md lg:px-space-xl py-space-xl">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<!-- Carousel Header with Countdown -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md border-b border-surface-container-high mb-space-lg">
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[26px]">flash_on</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold">Lightning Deals</h2>
+</div>
+<div class="flex items-center gap-space-xs bg-error-container/40 text-on-error-container px-space-sm py-space-xxs rounded-lg">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider">Ends in</span>
+<span class="font-title-sm text-title-sm font-bold tabular-nums" id="deal-timer">05h 24m 12s</span>
+</div>
+</div>
+<a class="font-label-md text-label-md font-semibold text-secondary hover:underline flex items-center gap-space-xxs self-start sm:self-auto" href="#">
+<span>See all lightning discounts</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- 5 High-Conversion Deal Cards Horizontal Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-space-md">
+<!-- Deal Item 1: Sony WH-1000XM5 -->
+<div class="group flex flex-col justify-between bg-surface-container-lowest hover:bg-surface-container-low/50 p-space-sm rounded-lg transition-all relative">
+<button aria-label="Add to wishlist" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container/60 hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-error transition-colors z-10">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div>
+<div class="relative w-full aspect-square bg-surface-container rounded-lg overflow-hidden p-space-md flex items-center justify-center mb-space-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Sony WH-1000XM5 wireless noise cancelling silver over-ear headphones on pure minimalist white studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTC3VHUtotmDtwEMzfHVqmMz1WHIERq7w3JM00SmpM__SP_3rOv_VymZUfPY9n68yaW2wfJpUQOsaNbTCHhTbHUhSPpjD4BdpzZ4HdmWDFIDXcqs48-jAT-Yox34yE-HD3tYStcL6ZVkOqbtWLuhSfjKv9aYHDS3Wlqqx6d_4PUcFProrAOpRELWgG6dxgsp8NPam8Mr-EIHdC6M5vOnz14T_LObgPyDuQTz43Pkg"/>
+<span class="absolute bottom-2 left-2 bg-error text-on-error font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold">23% OFF</span>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">4.7</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(14,230)</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold line-clamp-2 mb-space-xs">
+              Sony WH-1000XM5 Wireless Industry Leading ANC Headphones
+            </h3>
+<div class="flex flex-col gap-0.5 mb-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-price-md text-price-md font-bold text-on-surface">₹26,990</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹34,990</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Save ₹8,000 (23%)</span>
+</div>
+<!-- Delivery badge -->
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+<span class="font-bold">FREE Delivery Tomorrow</span>
+</div>
+</div>
+<button class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-primary font-label-md text-label-md font-bold py-space-xs rounded shadow-sm transition-colors flex items-center justify-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+<!-- Deal Item 2: Apple iPad 10th Gen -->
+<div class="group flex flex-col justify-between bg-surface-container-lowest hover:bg-surface-container-low/50 p-space-sm rounded-lg transition-all relative">
+<button aria-label="Add to wishlist" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container/60 hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-error transition-colors z-10">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div>
+<div class="relative w-full aspect-square bg-surface-container rounded-lg overflow-hidden p-space-md flex items-center justify-center mb-space-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Apple iPad 10th Generation 10.9-inch Liquid Retina display in vibrant Blue finish isolated against pure white backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwfTdn6MD_Gf9yFCVcuLs5ziHEtkW6_1tthHTFxkvlFYkMN4oSA1Yn6sEbNC8vt_kjVPqQYydJfeGK46me1exm9HsYlgOwIbw7AmPHxWKXv9tZP8jh3VzA19DjX2s97E_EP2rAeUx6FPHsQ1WyGgs3AR1xDOsXbVloIvZIDDIYnSbognUOEwE6J43zRmdT7cr1DtvnHWmVKIdWyWvUgjyTiG8-7RCNoiumeneN9D4"/>
+<span class="absolute bottom-2 left-2 bg-error text-on-error font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold">13% OFF</span>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">4.8</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(9,840)</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold line-clamp-2 mb-space-xs">
+              Apple iPad (10th Gen) 10.9-inch, 64GB Wi-Fi - Blue
+            </h3>
+<div class="flex flex-col gap-0.5 mb-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-price-md text-price-md font-bold text-on-surface">₹34,900</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹39,900</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Save ₹5,000 + No Cost EMI</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+<span class="font-bold">FREE Delivery Tomorrow</span>
+</div>
+</div>
+<button class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-primary font-label-md text-label-md font-bold py-space-xs rounded shadow-sm transition-colors flex items-center justify-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+<!-- Deal Item 3: OnePlus 12 5G -->
+<div class="group flex flex-col justify-between bg-surface-container-lowest hover:bg-surface-container-low/50 p-space-sm rounded-lg transition-all relative">
+<button aria-label="Add to wishlist" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container/60 hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-error transition-colors z-10">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div>
+<div class="relative w-full aspect-square bg-surface-container rounded-lg overflow-hidden p-space-md flex items-center justify-center mb-space-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="OnePlus 12 5G smartphone in luxury emerald green glass back with Hasselblad circular camera system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHJBbip7ssEcQWjP-eJK5etDV-_ZpEVW5s1Q9eeb9hP77HCGG8cgLJqO_VYgpzm1BoYkkwsnDEY03xyMSGFGFL08GwhiyJ_EbT4JWWIe1DfcD3chn20aMQcNJ1rPOFKWhuws7ppSharRDlYiKF-TOuEnMlaNNF91MX0Fm85Jbg4-nFCiZVEgO-ceY6RJha4lNLCoK7kSnvFyr1JZfhM_Ktvjc3Mgw-c3anLpMmHkA"/>
+<span class="absolute bottom-2 left-2 bg-error text-on-error font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold">₹3,000 COUPON</span>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">4.6</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(5,120)</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold line-clamp-2 mb-space-xs">
+              OnePlus 12 5G (16GB RAM, 512GB) - Emerald Green
+            </h3>
+<div class="flex flex-col gap-0.5 mb-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-price-md text-price-md font-bold text-on-surface">₹64,999</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹69,999</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Bank Offer: Flat ₹4,000 off</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+<span class="font-bold">FREE Delivery Tomorrow</span>
+</div>
+</div>
+<button class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-primary font-label-md text-label-md font-bold py-space-xs rounded shadow-sm transition-colors flex items-center justify-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+<!-- Deal Item 4: Instant Pot Pro 10-in-1 -->
+<div class="group flex flex-col justify-between bg-surface-container-lowest hover:bg-surface-container-low/50 p-space-sm rounded-lg transition-all relative">
+<button aria-label="Add to wishlist" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container/60 hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-error transition-colors z-10">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div>
+<div class="relative w-full aspect-square bg-surface-container rounded-lg overflow-hidden p-space-md flex items-center justify-center mb-space-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Instant Pot Pro multi-cooker stainless steel exterior with digital LCD control panel and tempered glass lid." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpVIKXE_oj0bB2xlr9K8zJ9Ho4jw9BUAm0w67nwX27_5iRki5A_M8mvBHEuF8QLtLBOOlCrUTXUwWMClbhu1fe3-LaAAcxYlvOWt_7vQW8caBZkPqAzreTcjj1NKF-2O6IIl4deT7j6ATJYnNrs8uLoYWhZxwNk8C1s7WFbwGD8DTm9B5F0zENg4rVY0LZMDq2lyyrYjFcAb8s5cocCl3VBJJqk2SHp6pmfVbvL2Y"/>
+<span class="absolute bottom-2 left-2 bg-error text-on-error font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold">32% OFF</span>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">4.7</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(21,400)</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold line-clamp-2 mb-space-xs">
+              Instant Pot Pro 10-in-1 Electric Pressure Cooker 5.7L
+            </h3>
+<div class="flex flex-col gap-0.5 mb-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-price-md text-price-md font-bold text-on-surface">₹11,499</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹16,999</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Save ₹5,500</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+<span class="font-bold">FREE Delivery Tomorrow</span>
+</div>
+</div>
+<button class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-primary font-label-md text-label-md font-bold py-space-xs rounded shadow-sm transition-colors flex items-center justify-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+<!-- Deal Item 5: Samsung 55-inch 4K TV -->
+<div class="group flex flex-col justify-between bg-surface-container-lowest hover:bg-surface-container-low/50 p-space-sm rounded-lg transition-all relative">
+<button aria-label="Add to wishlist" class="absolute top-2 right-2 w-8 h-8 rounded-full bg-surface-container/60 hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-error transition-colors z-10">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div>
+<div class="relative w-full aspect-square bg-surface-container rounded-lg overflow-hidden p-space-md flex items-center justify-center mb-space-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Samsung 55 inch Crystal 4K UHD smart TV displaying vibrant nature landscape with ultra-thin bezel on modern console table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQfj-8AFsvz6IbRqll3_igZg_nljxPz0Aq8fBt_88ju8Xx2iJOLP922PcgVbJswSFV8BQu3yDY3JVfeBOZepzZG56yl0bjWLinmsYzM8Or5HMHBXCfHiQx0nUwfoKor1H-DbXjbqpH-ZNcIAdt9mY5eLa8ZJCuD7nJY04y0YPLQ28YyplIXA4fzqPECRiHHTMIq1HcNPEoaEiIMmccrZsNfw0l6pisKFz99g5ed8U"/>
+<span class="absolute bottom-2 left-2 bg-error text-on-error font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold">35% OFF</span>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">4.5</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(18,900)</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold line-clamp-2 mb-space-xs">
+              Samsung 55-inch Crystal 4K Vivid Pro Series Smart TV
+            </h3>
+<div class="flex flex-col gap-0.5 mb-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-price-md text-price-md font-bold text-on-surface">₹41,990</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹64,900</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Free Installation Included</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">local_shipping</span>
+<span class="font-bold">Scheduled Delivery &amp; Setup</span>
+</div>
+</div>
+<button class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-primary font-label-md text-label-md font-bold py-space-xs rounded shadow-sm transition-colors flex items-center justify-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Mid-Page Full Width Brand Spotlight Banner: Prime Day Promo -->
+<section class="w-full max-w-[1500px] mx-auto px-space-md lg:px-space-xl py-space-sm">
+<div class="relative w-full rounded-2xl overflow-hidden bg-gradient-to-r from-primary-container via-surface-container-highest to-primary-container shadow-lg p-space-lg lg:p-space-2xl text-on-primary">
+<div class="grid grid-cols-1 lg:grid-cols-12 items-center gap-space-lg">
+<div class="lg:col-span-8">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold uppercase tracking-wider">
+              Exclusive Member Perks
+            </span>
+<span class="text-secondary-fixed font-title-sm text-title-sm font-semibold">Coming July 18-20</span>
+</div>
+<h2 class="font-display-lg text-display-lg font-bold text-on-primary tracking-tight mb-space-sm">
+            ShopSphere Prime Day is Coming
+          </h2>
+<p class="font-body-md text-body-md text-inverse-on-surface max-w-[640px] mb-space-lg">
+            Get ready for unprecedented discounts on 40,000+ top brands, unlimited FREE 1-Day Delivery, 4K blockbuster streaming on Prime Video, and ad-free high fidelity music.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md">
+<a class="bg-secondary-container hover:bg-secondary-fixed-dim text-on-secondary-container font-title-sm text-title-sm font-bold px-space-xl py-space-sm rounded-lg transition-transform active:scale-95 shadow-md flex items-center gap-space-xs" href="#">
+<span>Notify Me on Early Deals</span>
+<span class="material-symbols-outlined text-[18px]">notifications_active</span>
+</a>
+<a class="bg-surface-container-high/20 hover:bg-surface-container-high/30 text-on-primary font-title-sm text-title-sm px-space-lg py-space-sm rounded-lg transition-colors border border-outline-variant/30" href="#">
+<span>Explore Prime Video Lineup</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-4 flex items-center justify-center lg:justify-end">
+<div class="bg-surface-container-lowest/10 backdrop-blur-md p-space-lg rounded-2xl border border-outline-variant/20 flex flex-col gap-space-sm text-center max-w-[320px] w-full">
+<div class="w-14 h-14 mx-auto rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container shadow-md">
+<span class="material-symbols-outlined text-[32px]">redeem</span>
+</div>
+<div class="font-headline-md text-headline-md font-bold text-on-primary">Join for ₹1,499</div>
+<p class="font-body-sm text-body-sm text-inverse-on-surface">Get ₹250 instant cashback directly into your ShopSphere Pay balance upon activation.</p>
+<button class="bg-[#FFD814] hover:bg-[#F7CA00] text-primary font-title-sm text-title-sm font-bold py-space-xs rounded shadow-sm transition-colors mt-space-xs">
+              Start 30-Day Free Trial
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Horizontal Product Carousel 2: Best Sellers in Electronics & Gadgets -->
+<section class="w-full max-w-[1500px] mx-auto px-space-md lg:px-space-xl py-space-xl">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between pb-space-md border-b border-surface-container-high mb-space-lg">
+<div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold">Best Sellers in Electronics &amp; Accessories</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Top-ranked devices based on sales this week</p>
+</div>
+<a class="font-label-md text-label-md font-semibold text-secondary hover:underline flex items-center gap-space-xxs" href="#">
+<span>Explore Electronics Best Sellers</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-space-md">
+<!-- Best Seller 1: Smartwatch -->
+<div class="group flex flex-col justify-between bg-surface-container-lowest hover:bg-surface-container-low/50 p-space-sm rounded-lg transition-all">
+<div>
+<div class="relative w-full aspect-square bg-surface-container rounded-lg overflow-hidden p-space-md flex items-center justify-center mb-space-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Rugged outdoor GPS smartwatch with sapphire crystal glass and orange titanium bezel on white surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN_XllKL3mHf_Q51jIbafY6k6-vQFbIFU8qfV8qpYRoKFldvmfMfsvjA3sdY8mmKG1NztPXw-j7oa3kOr63uFT7hMhubws8Qs7hZGEQLT66M5Wj5nvXchv214FdJPOC4WLlS4FPhlCPIbQqKNRQ6mKjg8Uv92yyW-VRhZRMcE1B4G0WijgPzS0VkwUZSDrdGPFCK3glqkJxGN7VHSPg3YMIf6e5S_IwPdejDms_tQ"/>
+<span class="absolute top-2 left-2 bg-secondary text-on-secondary font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold">#1 Best Seller</span>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">4.6</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(38,120)</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold line-clamp-2 mb-space-xs">
+              Amazfit Active Edge 1.32" Rugged Smartwatch with GPS
+            </h3>
+<div class="flex flex-col gap-0.5 mb-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-price-md text-price-md font-bold text-on-surface">₹8,999</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹12,999</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">31% Off with Bank Card</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+<span class="font-bold">Prime 1-Day Delivery</span>
+</div>
+</div>
+<button class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-primary font-label-md text-label-md font-bold py-space-xs rounded shadow-sm transition-colors flex items-center justify-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+<!-- Best Seller 2: Earbuds -->
+<div class="group flex flex-col justify-between bg-surface-container-lowest hover:bg-surface-container-low/50 p-space-sm rounded-lg transition-all">
+<div>
+<div class="relative w-full aspect-square bg-surface-container rounded-lg overflow-hidden p-space-md flex items-center justify-center mb-space-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Compact matte black true wireless noise cancellation earbuds inside charging pod on bright surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgmsV57OjyXL-qJ4OJ4tVm3o9RpzoJQWhpSXGPBg6n0GmxdxMSC99kHrXhgKSQIEpq6TbT-04y0JFg_Auj3KJhCCRbqDwFxgGIHnlZ5_y48BaF7Jjj-JpaRrnKMH5jAiF7IzxF0Nb2RdjHH-7VSh13gguEeTeOBpYPX3XCdQ0LDEyZBwk8wZ8nD7CY8YKvjv_6-2_QQm_kjnJKF00EeDJZNRfWYDz5q5muyP9uPV8"/>
+<span class="absolute top-2 left-2 bg-secondary text-on-secondary font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold">#2 Best Seller</span>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">4.8</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(52,430)</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold line-clamp-2 mb-space-xs">
+              JBL Live Beam 3 Hi-Res Wireless ANC Earbuds with Smart Screen Case
+            </h3>
+<div class="flex flex-col gap-0.5 mb-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-price-md text-price-md font-bold text-on-surface">₹13,999</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹24,999</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Save ₹11,000 (44%)</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+<span class="font-bold">Prime 1-Day Delivery</span>
+</div>
+</div>
+<button class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-primary font-label-md text-label-md font-bold py-space-xs rounded shadow-sm transition-colors flex items-center justify-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+<!-- Best Seller 3: Mechanical Keyboard -->
+<div class="group flex flex-col justify-between bg-surface-container-lowest hover:bg-surface-container-low/50 p-space-sm rounded-lg transition-all">
+<div>
+<div class="relative w-full aspect-square bg-surface-container rounded-lg overflow-hidden p-space-md flex items-center justify-center mb-space-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Custom mechanical keyboard with dual-tone PBT keycaps and warm white underglow on leather desk pad." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLm1i80vq8XWOuG6aNjr48z5jhF5P9sr0wlqOjVPZDnJ-WNVWMZbmFDdCtpSlymZ7L5DK6w3QewH6iSPY_cRxu4A6uAe4i_zvvJnrL8MhWDiqqvYqJmFsBVsufDzSx6tFLPKlXvRPirY23ENifVEHphCdAWGd8wIbxyo-wARUigPtXb-aeJBZs4Yhs9o1ayz6801mCvcyc47LlIxf_NA9WlelBlTEpjOC-2rvvygc"/>
+<span class="absolute top-2 left-2 bg-secondary text-on-secondary font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold">#3 Best Seller</span>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">4.5</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(8,410)</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold line-clamp-2 mb-space-xs">
+              Keychron K2 Wireless Hot-swappable Mechanical Keyboard
+            </h3>
+<div class="flex flex-col gap-0.5 mb-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-price-md text-price-md font-bold text-on-surface">₹7,499</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹9,999</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Hot-Swappable Gateron Switches</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+<span class="font-bold">Prime 1-Day Delivery</span>
+</div>
+</div>
+<button class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-primary font-label-md text-label-md font-bold py-space-xs rounded shadow-sm transition-colors flex items-center justify-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+<!-- Best Seller 4: Power Bank -->
+<div class="group flex flex-col justify-between bg-surface-container-lowest hover:bg-surface-container-low/50 p-space-sm rounded-lg transition-all">
+<div>
+<div class="relative w-full aspect-square bg-surface-container rounded-lg overflow-hidden p-space-md flex items-center justify-center mb-space-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Ultra-high-capacity 20000mAh portable fast charging power bank with digital percentage battery display." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-_3IETwV6yh60YE2xQzNipS4LMUnicYBe0TeUau5AKml9CezPbpgDyZnGyLaBgUX6JEamsp4Pvid7NuKH2Ov5BrywBiMCY3mdya6SSGMdQ5Ue5zEzLUpLgQbqrjbx4SsWA102VCJtkhWWvbjck0tb-Y3-9G8EJRYRgcH2ZRE0aWT3wddbN4mt7mv_21dxy8-kR9D8Z9erCGyyKE65vsdZ64vmP1POKhbl1B-wlUA"/>
+<span class="absolute top-2 left-2 bg-secondary text-on-secondary font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold">#4 Best Seller</span>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">4.7</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(64,120)</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold line-clamp-2 mb-space-xs">
+              Anker 20,000mAh 65W Power Delivery Ultra-Fast Power Bank
+            </h3>
+<div class="flex flex-col gap-0.5 mb-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-price-md text-price-md font-bold text-on-surface">₹3,999</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹5,999</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Charges Laptops &amp; Phones</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+<span class="font-bold">Prime 1-Day Delivery</span>
+</div>
+</div>
+<button class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-primary font-label-md text-label-md font-bold py-space-xs rounded shadow-sm transition-colors flex items-center justify-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+<!-- Best Seller 5: 4K Monitor -->
+<div class="group flex flex-col justify-between bg-surface-container-lowest hover:bg-surface-container-low/50 p-space-sm rounded-lg transition-all">
+<div>
+<div class="relative w-full aspect-square bg-surface-container rounded-lg overflow-hidden p-space-md flex items-center justify-center mb-space-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="27-inch 4K UHD color-accurate creator monitor with USB-C 90W single cable connection on clean birch wooden table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6q51D-cKhecpBsiSJRS3UidvXaIWEFXOquCQ24HCbyhyIpL4qx0d_eVXvSzFwRU6YHkiOM0X_ZpjnwUcDocTt9g2GnXZYKpOYaBbh0-kVu9z35FHl5Y_Ku020RxNwG8NCbLCKfIdYYIYF9TwMQcx0JljNSxu4SOH4llI4VB6d1XpdRtCoaN_Moln93tza3WIkrUgkDAtBkSaJXsijRT2AUNA1zmNQzR_u3OtrCug"/>
+<span class="absolute top-2 left-2 bg-secondary text-on-secondary font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold">#5 Best Seller</span>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">4.6</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(12,850)</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold line-clamp-2 mb-space-xs">
+              LG 27-inch 4K UHD IPS Display with USB-C 90W PD &amp; HDR400
+            </h3>
+<div class="flex flex-col gap-0.5 mb-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-price-md text-price-md font-bold text-on-surface">₹24,990</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹36,000</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Save ₹11,010 (31%)</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+<span class="font-bold">Prime 1-Day Delivery</span>
+</div>
+</div>
+<button class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-primary font-label-md text-label-md font-bold py-space-xs rounded shadow-sm transition-colors flex items-center justify-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Horizontal Product Carousel 3: Home & Kitchen Essentials -->
+<section class="w-full max-w-[1500px] mx-auto px-space-md lg:px-space-xl py-space-sm">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between pb-space-md border-b border-surface-container-high mb-space-lg">
+<div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold">Home &amp; Kitchen Essentials</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Top-rated appliances engineered for everyday convenience</p>
+</div>
+<a class="font-label-md text-label-md font-semibold text-secondary hover:underline flex items-center gap-space-xxs" href="#">
+<span>Explore Kitchen Store</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-space-md">
+<!-- Kitchen 1: Air Fryer -->
+<div class="group flex flex-col justify-between bg-surface-container-lowest hover:bg-surface-container-low/50 p-space-sm rounded-lg transition-all">
+<div>
+<div class="relative w-full aspect-square bg-surface-container rounded-lg overflow-hidden p-space-md flex items-center justify-center mb-space-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Digital touch air fryer in matte black finish with transparent viewing window showing crispy golden fries." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlj1CFG69ULrb75fWD94y4pHw5ZX1taqi_YB_f6XdivYHWPWSlk1HrOVce0LzRSBMY0e-PMUXnerbl9mIFqADVYpiJWAZjUYZhQ9M_WWYQQ2nZuIC_ktFH9T4cVxFgpUTqoyo2akbwhq2Dq2wj1e3auFAvBJv2fKEUYqlFWhe3k2yRT6iun5-nTI9IPEaghj2qC2dI41F-kJJ1CIlDCnMURB0ypWN4sf-bbOLDgc8"/>
+<span class="absolute bottom-2 left-2 bg-secondary text-on-secondary font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold">38% OFF</span>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">4.6</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(17,210)</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold line-clamp-2 mb-space-xs">
+              Philips Digital Air Fryer HD9252/90 4.1L with Rapid Air Tech
+            </h3>
+<div class="flex flex-col gap-0.5 mb-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-price-md text-price-md font-bold text-on-surface">₹7,499</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹11,995</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">90% Less Fat Cooking</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+<span class="font-bold">Prime 1-Day Delivery</span>
+</div>
+</div>
+<button class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-primary font-label-md text-label-md font-bold py-space-xs rounded shadow-sm transition-colors flex items-center justify-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+<!-- Kitchen 2: Robot Vacuum -->
+<div class="group flex flex-col justify-between bg-surface-container-lowest hover:bg-surface-container-low/50 p-space-sm rounded-lg transition-all">
+<div>
+<div class="relative w-full aspect-square bg-surface-container rounded-lg overflow-hidden p-space-md flex items-center justify-center mb-space-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Smart robotic vacuum and mop cleaner docking at auto-empty station on polished parquet wooden flooring." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB91YZBcwi_H34R5h-e2Kx8hglTJs-4z208TNXp0u5MyuEH2RseI89DjAJOb1qlJFt0ZDISMBaDQdWrUWV306b5nZ_9Y2_aINUTSt9kNK0sMH1_B-uwfyzZ1pu0VzjEoddw-RX4rR5DhktIv76z5fKWMgO_XWzAKRDs4OE1pGdXGr9QrZRhYfXrJg9PDIUmcN0LWfyeUAXEpduBn1yr6VaTTnuhpI0R_qebkQKu4iA"/>
+<span class="absolute bottom-2 left-2 bg-secondary text-on-secondary font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold">42% OFF</span>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">4.7</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(9,340)</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold line-clamp-2 mb-space-xs">
+              Ecovacs Deebot N10 Robotic Vacuum Cleaner &amp; Mop with LiDAR
+            </h3>
+<div class="flex flex-col gap-0.5 mb-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-price-md text-price-md font-bold text-on-surface">₹24,900</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹42,900</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Save ₹18,000 (42%)</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+<span class="font-bold">Prime 1-Day Delivery</span>
+</div>
+</div>
+<button class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-primary font-label-md text-label-md font-bold py-space-xs rounded shadow-sm transition-colors flex items-center justify-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+<!-- Kitchen 3: Espresso Maker -->
+<div class="group flex flex-col justify-between bg-surface-container-lowest hover:bg-surface-container-low/50 p-space-sm rounded-lg transition-all">
+<div>
+<div class="relative w-full aspect-square bg-surface-container rounded-lg overflow-hidden p-space-md flex items-center justify-center mb-space-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Italian polished stainless steel espresso coffee machine pouring rich crema into glass demitasse cup with steam wand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATRcEWEyw4s6jzWfK5tVeL9s40cjq3LIRBFglWIoC-00vJ8D93gwheNIbiF2H1Rnv6lmfZWdWRE9xkvo9-IQUMsKi6M4KiFOBAf8v6beggrGKZBpRYU9PT1OE6WqoDHJAM3mBZgAdKY0JsMcinW2yhjKqZ3UaDIsmVQqBF3_oijzAGgMFBYR2NLd2rTNZhpsTHrXPaTuvXNZNy-x90LriZ1gJ8jXhB7WGnNftNZtY"/>
+<span class="absolute bottom-2 left-2 bg-secondary text-on-secondary font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold">28% OFF</span>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">4.5</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(6,870)</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold line-clamp-2 mb-space-xs">
+              De'Longhi Dedica Deluxe 15-Bar Pump Espresso Machine
+            </h3>
+<div class="flex flex-col gap-0.5 mb-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-price-md text-price-md font-bold text-on-surface">₹18,990</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹26,490</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Includes Milk Frothing Pitcher</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+<span class="font-bold">Prime 1-Day Delivery</span>
+</div>
+</div>
+<button class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-primary font-label-md text-label-md font-bold py-space-xs rounded shadow-sm transition-colors flex items-center justify-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+<!-- Kitchen 4: Air Purifier -->
+<div class="group flex flex-col justify-between bg-surface-container-lowest hover:bg-surface-container-low/50 p-space-sm rounded-lg transition-all">
+<div>
+<div class="relative w-full aspect-square bg-surface-container rounded-lg overflow-hidden p-space-md flex items-center justify-center mb-space-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Cylindrical smart room air purifier with real-time numeric PM2.5 air quality display in sleek matte white finish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANZxIhbrGPJiJ9IKoFRzOIo5Pw68v2tFZXSmia9v4wtpJa8pV1Jp9AcRlrXKdI1hle-EeAgTD9ffM-fm8Dgwvw3tioJMxuBUfS30klksxGNF0dEjwGShTIf63DvYKasX7QJfF21Q5sXWIbkCsiUk-KGOp50XiXH3jp4t46O3rOUrwJ-fjOZodWiqIhvaZ5XNW5mvk6C3Dgik_pNRIHSUXStS41QI1mNAGINU51qhs"/>
+<span class="absolute bottom-2 left-2 bg-secondary text-on-secondary font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold">25% OFF</span>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">4.8</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(14,580)</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold line-clamp-2 mb-space-xs">
+              Coway Airmega 150 True HEPA Air Purifier (Coverage: 355 Sq. Ft)
+            </h3>
+<div class="flex flex-col gap-0.5 mb-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-price-md text-price-md font-bold text-on-surface">₹12,990</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹17,490</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Removes 99.99% Viruses &amp; Pollen</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+<span class="font-bold">Prime 1-Day Delivery</span>
+</div>
+</div>
+<button class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-primary font-label-md text-label-md font-bold py-space-xs rounded shadow-sm transition-colors flex items-center justify-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+<!-- Kitchen 5: Cookware Triply Set -->
+<div class="group flex flex-col justify-between bg-surface-container-lowest hover:bg-surface-container-low/50 p-space-sm rounded-lg transition-all">
+<div>
+<div class="relative w-full aspect-square bg-surface-container rounded-lg overflow-hidden p-space-md flex items-center justify-center mb-space-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Set of 3 triply stainless steel cookware pots and frying pan with stay-cool handles on dark stone kitchen island." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI8vInn0t4ag7z8Csfe85gaw0DrYUEaE9DsrabZ7HyQ3bYcer1t5dkTP-hMMG5zVYi1vfhNJHsaumcxDIybvncyfJUmL7Y-S8m8fRW64qgwboc0eyw1BlUj6wUcSrKuwcPjOFbeXySThDQZBqdjRw2Lb9zxFnZjApbRImhYhPjWnn5S9_9diMeE7fxqv6cV72ZiKdqbcqWeH2O0ebCbW6zzZ6VyMcj2qN8pw_SQ50"/>
+<span class="absolute bottom-2 left-2 bg-secondary text-on-secondary font-label-sm text-label-sm px-space-xs py-0.5 rounded font-bold">50% OFF</span>
+</div>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">4.6</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(11,290)</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold line-clamp-2 mb-space-xs">
+              Prestige Tri-ply Stainless Steel 3-Piece Cookware Set (Induction Base)
+            </h3>
+<div class="flex flex-col gap-0.5 mb-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-price-md text-price-md font-bold text-on-surface">₹4,299</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹8,595</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">10-Year Manufacturer Warranty</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+<span class="font-bold">Prime 1-Day Delivery</span>
+</div>
+</div>
+<button class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-primary font-label-md text-label-md font-bold py-space-xs rounded shadow-sm transition-colors flex items-center justify-center gap-space-xxs">
+<span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Personalized Recommendations & Recently Viewed Bar -->
+<section class="w-full max-w-[1500px] mx-auto px-space-md lg:px-space-xl py-space-xl mb-space-2xl">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between pb-space-md border-b border-surface-container-high mb-space-md">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Inspired by your browsing history</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rahul, items you recently checked out or added to wishlists</p>
+</div>
+<a class="font-label-md text-label-md font-semibold text-secondary hover:underline flex items-center gap-space-xxs" href="#">
+<span>Manage your browsing history</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-space-md">
+<!-- Rec 1 -->
+<a class="group flex flex-col bg-surface-container-lowest hover:bg-surface-container-low p-space-xs rounded-lg transition-colors" href="#">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden p-2 flex items-center justify-center mb-space-xs">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Braided USB-C fast charging cable with silicone cable organizer strap on light desk." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiCGQqJp7utap7N7nfBZMJ5gR81cyEIPMsV3gYVIgG6S7MOek0YacOe8chAnQATrrDm0a1Ab3JmH8tplzD1HI-HmP-UcpWYy5Mbku3iyy-cGvbgMT9Q0oeQ6ZF419TwMOma3btfJ7YTsWn0316J7TKwwscbveOUkD_H_4HEnNlDCn4ZQ8jKoCcDxAbWI14LiOpiKmxZfxOAE_n-avdOjaCcWq8kEB4KWiTu5rgKM0"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Braided 100W USB-C Cable (2m)</span>
+<span class="font-price-md text-price-md font-bold text-on-surface">₹499</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">In stock</span>
+</a>
+<!-- Rec 2 -->
+<a class="group flex flex-col bg-surface-container-lowest hover:bg-surface-container-low p-space-xs rounded-lg transition-colors" href="#">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden p-2 flex items-center justify-center mb-space-xs">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Ergonomic memory foam seat cushion with cooling gel layer on modern office chair." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgwsVWPxBC0tcdhW7Bw_HBp3UtDWzJC_CYaU2WgLa9qYogreGXVLzaw6SAqtJh1AoUDhdqOqbmLYdZaKZH8YczieXNedSKPJzNMUeKTJTDA67CuVEAFtiFKsSkI2n5KK67oHCe99Cnf73PacXaVlqhGwtp6gv3JmGmeqrOk6s_1obx1cTHzpdjK2HCvf5bUWmSCfjM39KP2sY1SOH055BWK9dina4UStrzGiTQDWU"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Orthopedic Memory Foam Cushion</span>
+<span class="font-price-md text-price-md font-bold text-on-surface">₹1,499</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">1-Day Delivery</span>
+</a>
+<!-- Rec 3 -->
+<a class="group flex flex-col bg-surface-container-lowest hover:bg-surface-container-low p-space-xs rounded-lg transition-colors" href="#">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden p-2 flex items-center justify-center mb-space-xs">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Stainless steel insulated vacuum water flask 1000ml in powder-coated matte black." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFg9TJKknK406LUiJcBvn_WEYAmBh8o2cZKQGKeg6DETdETRVx_dgDubiDMNW3kEHpd2G14M4ywykbh72jqvsrPZPJYaF26k3skyoSPiApuctKq1G2RiR_4TaMZrbjP5uxV6dhnkXFcc-PxScTVQBpdfWgA3QwH_f54B7w-W5DwBP0SkJj12tZuWf2FhE32roSyyHpyE0H3kxHPbv-8o4nm4JX4iCwiGLr70SseUc"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Insulated Steel Bottle 1L</span>
+<span class="font-price-md text-price-md font-bold text-on-surface">₹799</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Popular re-order</span>
+</a>
+<!-- Rec 4 -->
+<a class="group flex flex-col bg-surface-container-lowest hover:bg-surface-container-low p-space-xs rounded-lg transition-colors" href="#">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden p-2 flex items-center justify-center mb-space-xs">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Adjustable aluminum laptop stand with heat dissipation vents on wooden work desk." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3BzLspseq1EzGIYMVwDOb3xgZOdWQ3x2NPPXtZYR0gM1CV7_ZafLGYZTNlIl_ti1imL-RAUgkX-qn6aw6b-UcHYb-5qVpA7vsS2Zjxdf_RK2EiLl7HoYWuY1b6oERWWDLcF8pi0A-7zkxnOn3lZeM0tWY8FOTbz0lsQoh_09uYLOIK0PJrXk33uFcihzFXPFiEcYWHlHsTK3Pg-YZNptjQPDSXQsNneN6qzP1rxA"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Ergonomic Laptop Riser Stand</span>
+<span class="font-price-md text-price-md font-bold text-on-surface">₹1,199</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Top Rated</span>
+</a>
+<!-- Rec 5 -->
+<a class="group flex flex-col bg-surface-container-lowest hover:bg-surface-container-low p-space-xs rounded-lg transition-colors" href="#">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden p-2 flex items-center justify-center mb-space-xs">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Glass french press coffee maker with chrome frame and measurement markings." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaEh26sDBoykihKf1Ci-4yk5V8_eoAzzKI4osA3BkVsOmUib5DlGyuUO9oEpmMbu0J1nHEQT0G0n6jiOorNh8YggmaXyUEN06LR1OyROqg38tY0_hGhBluJPVUOOGSgSpS4KapWbUELZSIXN0uYsVwNECNnUVDtzYFtrcv_xcnho3DNeiMDYfmNjfw_hhRCNHTnpnEpRK5RGdtYFcmPVFk2rKcbu39PW90W9Jxee4"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Borosilicate French Press 600ml</span>
+<span class="font-price-md text-price-md font-bold text-on-surface">₹899</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">In stock</span>
+</a>
+<!-- Rec 6 -->
+<a class="group flex flex-col bg-surface-container-lowest hover:bg-surface-container-low p-space-xs rounded-lg transition-colors" href="#">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden p-2 flex items-center justify-center mb-space-xs">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform" data-alt="Smart RGB LED light bar with sound synchronization mounted behind computer display." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgJ3hG2y7tMRVKib-uCSlbSrHPYPUyU0KGgL5sLrIzACACEAEkICFDEzE-6CG-wRW5Scg-lGPrCSscMkAnyCN_jUsIe0Vt68GsFhf9pXZRk5tfVdHefhqb-Uw-TWea-anHShxXtbCKJY2AdDlYHXvz7d-wHd3t7gtIN838Lzaj3Tv9ofALM1oUKf06NmIu251Xfo7UxO0-lEKgcChQZGYvEjViFS5ke4xkNcn1ZYY"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Monitor ScreenBar Light</span>
+<span class="font-price-md text-price-md font-bold text-on-surface">₹2,899</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">1-Day Delivery</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Interactive Lightweight Script for Countdown Timer and Quick Cart Feedback -->
+<script>
+    (function initDealCountdown() {
+      let totalSeconds = 5 * 3600 + 24 * 60 + 12;
+      const timerElement = document.getElementById('deal-timer');
+      
+      if (!timerElement) return;
+
+      const interval = setInterval(() => {
+        if (totalSeconds <= 0) {
+          clearInterval(interval);
+          timerElement.innerText = "00h 00m 00s";
+          return;
+        }
+        totalSeconds--;
+        const hours = Math.floor(totalSeconds / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+        
+        const pad = (n) => String(n).padStart(2, '0');
+        timerElement.innerText = `${pad(hours)}h ${pad(minutes)}m ${pad(seconds)}s`;
+      }, 1000);
+    })();
+  </script>
+</div></main><footer class="w-full bg-inverse-surface text-inverse-on-surface"><a class="block w-full bg-surface-tint/30 hover:bg-surface-tint/40 py-space-md text-center font-label-md text-label-md text-inverse-on-surface transition-colors" href="#">Back to top</a><div class="max-w-[1500px] mx-auto px-space-xl lg:px-space-2xl py-space-2xl"><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-2xl text-left"><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md font-bold text-on-primary mb-space-xs">Get to Know Us</h3><nav class="flex flex-col gap-space-xs" data-active-classes="text-on-primary font-semibold"><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="about-shopsphere" href="#">About ShopSphere</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="careers" href="#">Careers</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="press-releases" href="#">Press Releases</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="shopsphere-science" href="#">ShopSphere Science</a></nav></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md font-bold text-on-primary mb-space-xs">Connect with Us</h3><nav class="flex flex-col gap-space-xs" data-active-classes="text-on-primary font-semibold"><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="community" href="#">Community Hub</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="creator-network" href="#">Creator Network</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="seller-forums" href="#">Seller Forums</a></nav></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md font-bold text-on-primary mb-space-xs">Make Money with Us</h3><nav class="flex flex-col gap-space-xs" data-active-classes="text-on-primary font-semibold"><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="sell-on-shopsphere" href="#">Sell on ShopSphere</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="protect-build-brand" href="#">Protect and Build Your Brand</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="global-selling" href="#">Global Selling</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="fulfillment-by-shopsphere" href="#">Fulfillment by ShopSphere</a></nav></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md font-bold text-on-primary mb-space-xs">Let Us Help You</h3><nav class="flex flex-col gap-space-xs" data-active-classes="text-on-primary font-semibold"><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="account-settings" href="#">Your Account</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="returns-centre" href="#">Returns Centre</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="purchase-protection" href="#">100% Purchase Protection</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="app-download" href="#">ShopSphere App Download</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="customer-service" href="#">Help Center</a></nav></div></div></div><div class="w-full bg-primary-container py-space-xl"><div class="max-w-[1500px] mx-auto px-space-md lg:px-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-xs" data-path="home" href="#"><img alt="ShopSphere Brand Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCVF_KWw56LzMMSlENPqWbYGE2O-rDvV2032bJG_jUpf9oT7PG-BJwiFvy003-lulftKqNAAzs5d3Tb2_Nij6bEZTA1AasqgGGsQmWhphnxr7ci9eCgN8TIazgAw0SBfRtJ46IUKQimcuCA9pMXdGqelhby674iBd_8ZI71h--fJxWE8wwCz2nRVNvXFQtKzc-wSTPjaXsCflYYA-NhnGqh4aq3C8dYo60_r1n4IqQh"/><span class="font-headline-md text-headline-md tracking-tight text-on-primary">ShopSphere<span class="font-label-sm text-label-sm text-secondary-container ml-space-xxs font-bold">.in</span></span></a><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded bg-surface-container-high/10 text-on-primary font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">language</span><span>India (₹ INR)</span></div></div><div class="flex flex-wrap items-center justify-center gap-space-md font-label-sm text-label-sm text-outline-variant"><a class="hover:text-on-primary transition-colors" data-path="conditions-of-use" href="#">Conditions of Use</a><a class="hover:text-on-primary transition-colors" data-path="privacy-notice" href="#">Privacy Notice</a><a class="hover:text-on-primary transition-colors" data-path="interest-based-ads" href="#">Interest-Based Ads</a><span>© 2025 ShopSphere.in, Inc. or its affiliates</span></div></div></div></footer></body></html>

@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "primary-fixed": "#dde3ee",
+        "surface-container-highest": "#e0e3e3",
+        "on-primary-container": "#7e848e",
+        "on-background": "#181c1d",
+        "on-secondary": "#ffffff",
+        "on-error": "#ffffff",
+        "on-tertiary-fixed": "#221b00",
+        "secondary-container": "#fe9800",
+        "outline": "#75777c",
+        "secondary": "#8a5100",
+        "on-error-container": "#93000a",
+        "inverse-primary": "#c1c7d2",
+        "primary-fixed-dim": "#c1c7d2",
+        "surface-container-lowest": "#ffffff",
+        "on-tertiary-fixed-variant": "#544600",
+        "surface-container": "#ebeeee",
+        "tertiary-container": "#c9a900",
+        "inverse-on-surface": "#eef1f1",
+        "surface-tint": "#595f68",
+        "on-tertiary-container": "#4c3f00",
+        "primary": "#000000",
+        "tertiary-fixed-dim": "#e8c400",
+        "on-secondary-fixed": "#2c1600",
+        "inverse-surface": "#2d3131",
+        "surface-container-low": "#f1f4f4",
+        "secondary-fixed-dim": "#ffb86f",
+        "error-container": "#ffdad6",
+        "error": "#ba1a1a",
+        "on-secondary-container": "#643900",
+        "on-surface": "#181c1d",
+        "on-primary": "#ffffff",
+        "surface-container-high": "#e6e9e9",
+        "on-primary-fixed-variant": "#414750",
+        "primary-container": "#161c24",
+        "tertiary": "#6f5d00",
+        "surface-bright": "#f7fafa",
+        "on-primary-fixed": "#161c24",
+        "on-secondary-fixed-variant": "#693c00",
+        "tertiary-fixed": "#ffe16b",
+        "background": "#f7fafa",
+        "surface-dim": "#d7dbdb",
+        "on-tertiary": "#ffffff",
+        "outline-variant": "#c5c6cb",
+        "on-surface-variant": "#45474b",
+        "surface": "#f7fafa",
+        "secondary-fixed": "#ffdcbd",
+        "surface-variant": "#e0e3e3"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "space-lg": "1rem",
+        "space-xl": "1.5rem",
+        "margin-md": "1.25rem",
+        "space-md": "0.75rem",
+        "gutter-sm": "0.5rem",
+        "margin-lg": "1.5rem",
+        "space-sm": "0.5rem",
+        "space-2xl": "2rem",
+        "margin": "1rem",
+        "space-xs": "0.25rem",
+        "gutter-lg": "1.25rem",
+        "space-xxs": "0.125rem",
+        "gutter": "1rem"
+      },
+      "fontFamily": {
+        "price-md": ["Inter"],
+        "headline-xl": ["Inter"],
+        "headline-md": ["Inter"],
+        "price-xl": ["Inter"],
+        "headline-lg": ["Inter"],
+        "display-lg": ["Inter"],
+        "label-sm": ["Inter"],
+        "body-md": ["Inter"],
+        "body-sm": ["Inter"],
+        "label-md": ["Inter"],
+        "title-sm": ["Inter"],
+        "title-md": ["Inter"],
+        "display-lg-mobile": ["Inter"],
+        "price-xl-mobile": ["Inter"]
+      },
+      "fontSize": {
+        "price-md": ["18px", {"lineHeight": "22px", "fontWeight": "500"}],
+        "headline-xl": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+        "headline-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+        "price-xl": ["28px", {"lineHeight": "32px", "fontWeight": "500"}],
+        "headline-lg": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+        "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+        "label-md": ["13px", {"lineHeight": "18px", "fontWeight": "500"}],
+        "title-sm": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+        "title-md": ["16px", {"lineHeight": "22px", "fontWeight": "600"}],
+        "display-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+        "price-xl-mobile": ["22px", {"lineHeight": "26px", "fontWeight": "600"}]
+      }
+    }
+  }
+};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><header class="fixed top-0 left-0 w-full z-50 shadow-[0_2px_8px_rgba(0,0,0,0.12)]"><div class="h-16 bg-primary-container px-space-md lg:px-space-xl flex items-center justify-between gap-space-md text-on-primary"><div class="flex items-center gap-space-lg flex-shrink-0"><a class="flex items-center gap-space-xs p-space-xs rounded hover:outline hover:outline-1 hover:outline-primary-fixed" data-path="home" href="#"><img alt="ShopSphere Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCVF_KWw56LzMMSlENPqWbYGE2O-rDvV2032bJG_jUpf9oT7PG-BJwiFvy003-lulftKqNAAzs5d3Tb2_Nij6bEZTA1AasqgGGsQmWhphnxr7ci9eCgN8TIazgAw0SBfRtJ46IUKQimcuCA9pMXdGqelhby674iBd_8ZI71h--fJxWE8wwCz2nRVNvXFQtKzc-wSTPjaXsCflYYA-NhnGqh4aq3C8dYo60_r1n4IqQh"/><span class="font-headline-md text-headline-md tracking-tight text-on-primary hidden sm:inline-block">ShopSphere<span class="font-label-sm text-label-sm text-secondary-container ml-space-xxs font-bold">.in</span></span></a><div class="hidden xl:flex items-center gap-space-xs p-space-xs rounded cursor-pointer hover:outline hover:outline-1 hover:outline-primary-fixed transition-all"><span class="material-symbols-outlined text-[20px] text-on-primary">location_on</span><div class="flex flex-col text-left leading-tight"><span class="font-label-sm text-label-sm text-outline-variant font-normal">Deliver to Rahul</span><span class="font-title-sm text-title-sm font-semibold text-on-primary">Bengaluru 560001</span></div></div></div><div class="flex-1 max-w-[820px] mx-space-sm hidden md:flex"><div class="flex w-full h-10 rounded-xl overflow-hidden focus-within:ring-2 focus-within:ring-secondary-container"><button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md px-space-md flex items-center gap-space-xxs border-r border-outline-variant/30 flex-shrink-0 transition-colors" type="button"><span class="truncate max-w-[110px]">All Categories</span><span class="material-symbols-outlined text-[16px]">arrow_drop_down</span></button><input class="w-full px-space-md bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none" placeholder="Search ShopSphere.in — Electronics, Mobiles, Fashion &amp; more" type="text"/><button class="bg-secondary-container hover:bg-secondary-fixed-dim text-on-secondary-container px-space-xl flex items-center justify-center flex-shrink-0 transition-colors" type="button"><span class="material-symbols-outlined text-[22px] font-bold">search</span></button></div></div><div class="flex items-center gap-space-xs sm:gap-space-sm flex-shrink-0 text-on-primary"><div class="hidden lg:flex items-center gap-space-xxs p-space-xs rounded cursor-pointer hover:outline hover:outline-1 hover:outline-primary-fixed transition-all"><span class="font-label-sm text-label-sm font-bold bg-surface-container-lowest text-on-surface px-space-xxs rounded">IN</span><span class="font-title-sm text-title-sm font-semibold">EN / ₹ INR</span><span class="material-symbols-outlined text-[16px] text-outline-variant">arrow_drop_down</span></div><a class="flex items-center gap-space-xs p-space-xs rounded cursor-pointer hover:outline hover:outline-1 hover:outline-primary-fixed transition-all" data-path="account-settings" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr2mMCTINyv_GP05-EIHffwEXQoCOKLbmc2X6rNplUWVaPRxQphxA57o6hXQnYJYJSeEFZpiol4g4Q4JWCKd0X5kiatmsu2Mhw9Ces4yw4F5NLlsBO2QaIXUuvtKfcXcnGhNXP20vmk9tPQ5gm7Up4_gpVYKxyoqP62sGRvMXuYKi_bXwsjkjzVFaxlLQjB_4I0_aQYJPCZR32xB5aaUYwayfPpz3IVbQLcBpCW-s"/><div class="hidden sm:flex flex-col text-left leading-tight"><span class="font-label-sm text-label-sm text-outline-variant font-normal">Hello, Rahul</span><span class="font-title-sm text-title-sm font-semibold flex items-center text-on-primary">Account &amp; Lists<span class="material-symbols-outlined text-[16px] text-outline-variant">arrow_drop_down</span></span></div></a><a class="hidden sm:flex flex-col text-left p-space-xs rounded cursor-pointer hover:outline hover:outline-1 hover:outline-primary-fixed transition-all leading-tight" data-path="order-history" href="#"><span class="font-label-sm text-label-sm text-outline-variant font-normal">Returns</span><span class="font-title-sm text-title-sm font-semibold text-on-primary">&amp; Orders</span></a><a class="flex items-center gap-space-xs p-space-xs rounded cursor-pointer hover:outline hover:outline-1 hover:outline-primary-fixed transition-all" data-path="shopping-cart" href="#"><div class="relative flex items-center"><span class="material-symbols-outlined text-[30px] text-on-primary">shopping_cart</span><span class="absolute -top-1 right-1 bg-secondary-container text-on-secondary-container font-headline-md text-[11px] h-4 w-4 rounded-full flex items-center justify-center font-bold">3</span></div><div class="hidden md:flex flex-col text-left leading-tight"><span class="font-label-sm text-label-sm text-outline-variant font-normal">Total</span><span class="font-title-sm text-title-sm font-bold text-secondary-fixed-dim">₹4,899</span></div></a></div></div><div class="h-10 bg-inverse-surface px-space-md lg:px-space-xl flex items-center justify-between text-on-primary shadow-inner"><div class="flex items-center gap-space-md overflow-x-auto overflow-y-hidden no-scrollbar py-space-xxs flex-1"><button class="flex items-center gap-space-xxs text-on-primary font-title-sm text-title-sm px-space-xs py-space-xxs rounded hover:outline hover:outline-1 hover:outline-primary-fixed flex-shrink-0" type="button"><span class="material-symbols-outlined text-[20px]">menu</span><span>All</span></button><nav class="flex items-center gap-space-md flex-shrink-0" data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded"><a class="font-label-md text-label-md text-inverse-on-surface hover:text-on-primary whitespace-nowrap px-space-xs py-space-xxs rounded transition-colors" data-path="todays-deals" href="#">Today's Deals</a><a aria-current="page" class="whitespace-nowrap px-space-xs py-space-xxs transition-colors bg-surface-container-high text-on-surface font-semibold rounded" data-path="electronics" href="#">Electronics</a><a class="font-label-md text-label-md text-inverse-on-surface hover:text-on-primary whitespace-nowrap px-space-xs py-space-xxs rounded transition-colors" data-path="mobiles" href="#">Mobiles</a><a class="font-label-md text-label-md text-inverse-on-surface hover:text-on-primary whitespace-nowrap px-space-xs py-space-xxs rounded transition-colors" data-path="fashion" href="#">Fashion</a><a class="font-label-md text-label-md text-inverse-on-surface hover:text-on-primary whitespace-nowrap px-space-xs py-space-xxs rounded transition-colors" data-path="home-kitchen" href="#">Home &amp; Kitchen</a><a class="font-label-md text-label-md text-inverse-on-surface hover:text-on-primary whitespace-nowrap px-space-xs py-space-xxs rounded transition-colors" data-path="prime-fast-delivery" href="#">Prime &amp; Fast Delivery</a><a class="font-label-md text-label-md text-inverse-on-surface hover:text-on-primary whitespace-nowrap px-space-xs py-space-xxs rounded transition-colors" data-path="books" href="#">Books</a><a class="font-label-md text-label-md text-inverse-on-surface hover:text-on-primary whitespace-nowrap px-space-xs py-space-xxs rounded transition-colors" data-path="sports-fitness" href="#">Sports &amp; Fitness</a><a class="font-label-md text-label-md text-inverse-on-surface hover:text-on-primary whitespace-nowrap px-space-xs py-space-xxs rounded transition-colors" data-path="customer-service" href="#">Customer Service</a><a class="font-label-md text-label-md text-inverse-on-surface hover:text-on-primary whitespace-nowrap px-space-xs py-space-xxs rounded transition-colors" data-path="new-releases" href="#">New Releases</a><a class="font-label-md text-label-md text-inverse-on-surface hover:text-on-primary whitespace-nowrap px-space-xs py-space-xxs rounded transition-colors" data-path="sell-on-shopsphere" href="#">Sell on ShopSphere</a></nav></div><div class="hidden 2xl:flex items-center gap-space-xs flex-shrink-0 pl-space-md"><span class="font-label-sm text-label-sm font-semibold text-secondary-fixed bg-secondary/40 px-space-sm py-space-xxs rounded border border-secondary-container/40 flex items-center gap-space-xxs"><span class="material-symbols-outlined text-[16px] text-secondary-container">local_fire_department</span>Great Indian Shopping Festival • Up to 70% Off</span></div></div></header><main class="w-full pt-[104px] bg-surface min-h-[calc(100vh-104px)]"><div class="flex flex-col w-full">
+<!-- Breadcrumb Navigation & Brand Meta Band -->
+<section class="w-full bg-surface-container-low px-space-md lg:px-space-xl py-space-sm shadow-sm">
+<div class="max-w-[1500px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-space-xs">
+<nav aria-label="Breadcrumb" class="flex flex-wrap items-center gap-space-xxs text-body-sm font-body-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Electronics</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Audio &amp; Video</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Headphones</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Over-Ear Headphones</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-semibold truncate max-w-[220px] sm:max-w-none">Sony WH-1000XM5</span>
+</nav>
+<div class="flex items-center gap-space-sm text-label-sm font-label-sm text-on-surface-variant">
+<span class="bg-secondary-container/15 text-on-secondary-container px-space-xs py-space-xxs rounded font-bold uppercase tracking-wider flex items-center gap-space-xxs">
+<span class="material-symbols-outlined text-[14px] text-secondary-container">workspace_premium</span>
+          #1 Best Seller
+        </span>
+<span class="hidden sm:inline">in Over-Ear Headphones</span>
+</div>
+</div>
+</section>
+<!-- Main Product Container (3-Column Layout) -->
+<main class="w-full max-w-[1500px] mx-auto px-space-md lg:px-space-xl py-space-md">
+<!-- Brand / Question Bar -->
+<div class="mb-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<a class="text-primary font-title-sm text-title-sm font-semibold hover:underline" href="#">Visit the Sony Store</a>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-space-xxs text-on-secondary-container">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 0.5;">star_half</span>
+</div>
+<span class="font-title-sm text-title-sm font-bold text-on-surface">4.7</span>
+<a class="text-body-sm font-body-sm text-on-surface-variant hover:text-primary transition-colors underline decoration-dotted ml-space-xxs" href="#customer-reviews">14,892 ratings</a>
+</div>
+</div>
+<div class="flex items-center gap-space-md text-body-sm font-body-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-space-xxs" href="#qa-section">
+<span class="material-symbols-outlined text-[16px]">forum</span>
+          1,000+ answered questions
+        </a>
+</div>
+</div>
+<!-- 3-Column Core Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Product Gallery (40% desktop -> lg:col-span-5) -->
+<section class="lg:col-span-5 bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col-reverse sm:flex-row gap-space-md">
+<!-- Vertical Thumbnail Strip -->
+<div class="flex sm:flex-col gap-space-sm overflow-x-auto sm:overflow-visible no-scrollbar shrink-0" id="thumb-strip">
+<button class="gallery-thumb w-14 h-14 sm:w-16 sm:h-16 rounded-lg bg-surface-container-low p-space-xxs flex items-center justify-center transition-all bg-surface-container-high outline outline-2 outline-secondary-container" data-img-idx="0">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="Studio hero photograph of Sony WH-1000XM5 wireless active noise canceling headphones in Midnight Black angle shot against a pristine soft neutral white background with subtle reflection, premium luxury consumer electronics aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcNbuPvj7AfY0EIe5FxAZHBUm3smoewc4LL1YotMTfBimhLCoeaNxkwE9gcFvN-S2afbbdjbMwyeTt0BYWU6KsgTnmothPQkIkcV5xuXc62_erZ9-0S_5VfCR7_ix7lYrUWaGSFxXZSyJn_B_B4uppc2j8-nt52mQ_K7JAwasVXoIHJk88y-jJVMsZh6qhgaUbhAc24t4afXspkAgzTJ0-Zmpgav5rpy0wgSk1E9w"/>
+</button>
+<button class="gallery-thumb w-14 h-14 sm:w-16 sm:h-16 rounded-lg bg-surface-container-low p-space-xxs flex items-center justify-center transition-all hover:bg-surface-container-high" data-img-idx="1">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="Sony WH-1000XM5 wireless headphones gracefully folded inside its ultra-sleek matte black zippered travel carrying case with audio cable and USB-C adapter visible, soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9UMKsF23BxwGFWeISAaDPaFeUxkSxnCmWifVKi_lCtY7NaeS5DLkt2fCc0MByanDb8GZmGiUdjf46ineWd394vQNNc_1qIGYrdCnyQ_Vd-1u7L0CGozjtIGod7gKJBvRM6SHmGoJCmmdQ43lmm1TYfk-uYUkrxBgimJSBBbUGwmMyEnqgRHT-W9E-9jZhaucOyC4rqPMb1nDz_fe_GUA4_n5K4GXpzCIbUVy-RGw"/>
+</button>
+<button class="gallery-thumb w-14 h-14 sm:w-16 sm:h-16 rounded-lg bg-surface-container-low p-space-xxs flex items-center justify-center transition-all hover:bg-surface-container-high" data-img-idx="2">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="Professional lifestyle side profile of a modern urban person wearing Sony WH-1000XM5 midnight black over-ear headphones while working at a minimalist desk in a bright coffee shop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBreK9E8Huc00m1HsnUqYwicPFySE8Oml48IPo9K4Eds-KYJyJUyeL1_roOly0d1Q6YSjuzeJdk1D2QDGUjJeaWwa4N91HsstNSDKu5BPWT7zvCXbW19TqxQoLj1w01Tl--We38lsJorrQ8dGUg38816XHrYeQORIKDipT5wZqCEoOpWQLmHSOSfHXkkdefIlRc3oFNjp8OwObkZ4QLBgRVTOmFOg_zG2IT1uIvWx8"/>
+</button>
+<button class="gallery-thumb w-14 h-14 sm:w-16 sm:h-16 rounded-lg bg-surface-container-low p-space-xxs flex items-center justify-center transition-all hover:bg-surface-container-high" data-img-idx="3">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="Extreme macro detail of the luxurious memory foam soft fit leather ear cushion and sleek headband pivot swivel hinge of Sony WH-1000XM5 headphones showing texture and craftsmanship" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOIurlHSwXivGlq25WOkVjuBu8qyHAuO_SFM-wf054b0CEurGFINr303XJclS6h42AWTRdKY_QYGS1cBp36bbpOx2OIbz8LkMvSStABzezTeqT8BSLrxZhU04OSIjxbR3jKpZ3qMd8Jo-sDdOzqzv_RQykqXw1pQW-_BKvYGmYyO6oBTAJI3VhqlommJ_DjS26T2WKCIkmeoxDd5V-NgRuXivKxYzeXVx76SgpX9Q"/>
+</button>
+<button class="gallery-thumb w-14 h-14 sm:w-16 sm:h-16 rounded-lg bg-surface-container-low p-space-xxs flex items-center justify-center transition-all hover:bg-surface-container-high" data-img-idx="4">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="Crisp technical 3D exploded diagram showing Sony V1 integrated processor and QN1 noise cancelling processors inside the ear-cup chamber with clear microphone beamforming callouts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxzF4lxkODjQl5eVryjPpszQINJ_gbCX-Hm4gaxfRXJXBgHB8NCXnyU6WdSgKoYE5qfqTGZDVPiYcxlbvMIFJpSGsTIo1k1d8UyLJyJKSkFCZI6sswC3yN-pm6PIHMb8DKXPkxUlNgSu1cq_S-YZ3kBCm_WvzDg06NmpelbRPr_uBNO1tejMl-DQViSqUBWkpM5s9I6w4rXYPPOS-YCY81AJOfKB-6AcKkvoVj8eE"/>
+</button>
+</div>
+<!-- Large Active Showcase Frame -->
+<div class="relative flex-1 aspect-square bg-surface-container-lowest flex items-center justify-center overflow-hidden rounded-xl p-space-lg group cursor-crosshair">
+<img class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110" data-alt="Full front angle perspective of Sony WH-1000XM5 wireless headphones in Midnight Black standing upright, perfectly lit highlighting sleek continuous headband and matte black driver cups" id="main-product-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGCWzgLbB_rA7oFMm77A3eoXveYlPLUCr7ksi8gHo2etnvAQ5moD_d1QaJY5GuKxTQaPbmojHA8e2_-2ELhzU-EtI-g66jEMCkjcqiJ5D8PZ8ItjMQkHQAjy_DKC66s0wIYxcF_ExWdWiGnFVrS67JooJUKAtDsumoqUxgqOucwuWRIduDd9IrIxZEdz8K3YIj0ALe1JPXtrFf090GB40R9Qo-XqHZPRg_bVcjZRs"/>
+<!-- Wishlist & Share Quick Triggers -->
+<div class="absolute top-space-sm right-space-sm flex flex-col gap-space-xs z-10">
+<button class="w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur shadow-sm hover:bg-surface-container-low flex items-center justify-center text-on-surface transition-all" title="Add to Wishlist">
+<span class="material-symbols-outlined text-[20px] text-error">favorite_border</span>
+</button>
+<button class="w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur shadow-sm hover:bg-surface-container-low flex items-center justify-center text-on-surface transition-all" title="Share Product">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+<!-- Zoom Indicator Tooltip -->
+<div class="absolute bottom-space-xs left-1/2 -translate-x-1/2 bg-surface-container-high/90 backdrop-blur px-space-sm py-space-xxs rounded-full text-label-sm font-label-sm text-on-surface-variant pointer-events-none flex items-center gap-space-xxs">
+<span class="material-symbols-outlined text-[14px]">zoom_in</span>
+              Roll over image to zoom in
+            </div>
+</div>
+</div>
+<!-- 360 & Video Quick Modals -->
+<div class="flex items-center justify-center gap-space-md pt-space-xs">
+<button class="flex items-center gap-space-xxs px-space-md py-space-xs rounded-xl bg-surface-container-low hover:bg-surface-container text-title-sm font-title-sm text-on-surface transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary">360</span>
+            360° Interactive View
+          </button>
+<button class="flex items-center gap-space-xxs px-space-md py-space-xs rounded-xl bg-surface-container-low hover:bg-surface-container text-title-sm font-title-sm text-on-surface transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px] text-error">play_circle</span>
+            Product Video (01:45)
+          </button>
+</div>
+</section>
+<!-- CENTER COLUMN: Product Intelligence & Specs (35% desktop -> lg:col-span-4) -->
+<section class="lg:col-span-4 bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<!-- Title & Subtitle -->
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold leading-tight">
+            Sony WH-1000XM5 Wireless Industry Leading Active Noise Cancelling Headphones
+          </h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xxs">
+            8 Mics for Clear Calling, 30Hr Battery, Touch Sensor Controls, Multipoint Connection - Midnight Black
+          </p>
+</div>
+<!-- Dynamic Price Cluster -->
+<div class="bg-surface-container-low/70 p-space-md rounded-xl flex flex-col gap-space-xxs">
+<div class="flex items-center gap-space-sm">
+<span class="bg-error text-on-error font-title-md text-title-md font-bold px-space-xs py-space-xxs rounded">
+              -23%
+            </span>
+<div class="flex items-baseline gap-space-xxs">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">₹</span>
+<span class="font-price-xl text-price-xl font-bold text-on-surface tracking-tight">26,990</span>
+<span class="font-title-sm text-title-sm text-on-surface">.00</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface-variant">
+<span>M.R.P.:</span>
+<span class="line-through">₹34,990.00</span>
+<span class="text-tertiary font-medium">You Save: ₹8,000 (23%)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Inclusive of all taxes</span>
+</div>
+<!-- EMI Details Pill -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-xs text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary mt-0.5">credit_card</span>
+<div class="flex flex-col">
+<span class="text-on-surface font-semibold">EMI starts at ₹1,309 per month.</span>
+<div class="flex items-center gap-space-xs">
+<span class="text-on-surface-variant">No Cost EMI available.</span>
+<button class="text-secondary font-semibold hover:underline cursor-pointer">EMI options</button>
+</div>
+</div>
+</div>
+<!-- Bank Offers Carousel / Grid -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm font-bold text-on-surface flex items-center gap-space-xxs">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">local_offer</span>
+              Bank Offers &amp; Discounts
+            </span>
+<span class="text-label-sm font-label-sm text-secondary cursor-pointer hover:underline">3 offers</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-xs">
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Bank Offer</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-space-xxs">Flat ₹2,500 Instant Discount on ICICI Bank Cards</p>
+<a class="font-label-sm text-label-sm text-secondary font-semibold mt-space-xs hover:underline" href="#">1 offer &gt;</a>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Cashback</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-space-xxs">5% Cashback on ShopSphere ICICI Co-brand Card</p>
+<a class="font-label-sm text-label-sm text-secondary font-semibold mt-space-xs hover:underline" href="#">1 offer &gt;</a>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Exchange</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-space-xxs">Up to ₹2,000 off on Exchange of old headphones</p>
+<a class="font-label-sm text-label-sm text-secondary font-semibold mt-space-xs hover:underline" href="#">Check eligibility &gt;</a>
+</div>
+</div>
+</div>
+<!-- Color Variant Selector -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Colour:</span>
+<span class="font-title-sm text-title-sm font-bold text-on-surface" id="selected-color-label">Midnight Black</span>
+</div>
+<div class="flex items-center gap-space-sm" id="color-swatches">
+<button class="color-btn flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-high outline outline-2 outline-secondary-container transition-all" data-color="Midnight Black">
+<span class="w-4 h-4 rounded-full bg-primary-container shadow-sm"></span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Midnight Black</span>
+</button>
+<button class="color-btn flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-all" data-color="Silver Platinum">
+<span class="w-4 h-4 rounded-full bg-surface-dim shadow-sm"></span>
+<span class="font-label-md text-label-md text-on-surface-variant">Silver Platinum</span>
+</button>
+<button class="color-btn flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-all" data-color="Smoky Navy Blue">
+<span class="w-4 h-4 rounded-full bg-primary shadow-sm"></span>
+<span class="font-label-md text-label-md text-on-surface-variant">Smoky Navy Blue</span>
+</button>
+</div>
+</div>
+<!-- Style / Configuration Option -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Style Name:</span>
+<div class="flex flex-wrap gap-space-xs">
+<button class="px-space-md py-space-xs rounded-lg font-label-md text-label-md font-semibold bg-surface-container-high outline outline-2 outline-secondary-container text-on-surface">
+              Standard Package
+            </button>
+<button class="px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant">
+              With Travel Case + Airplane Adapter (+₹1,199)
+            </button>
+</div>
+</div>
+<!-- Key Feature Bullets -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<span class="font-title-sm text-title-sm font-bold text-on-surface">About this item</span>
+<ul class="flex flex-col gap-space-xs text-body-sm font-body-sm text-on-surface leading-relaxed list-none">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5 shrink-0">check_circle</span>
+<span><strong>Industry-leading noise cancellation:</strong> Engineered with two dedicated processors and 8 microphones for unrivaled noise reduction anywhere.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5 shrink-0">check_circle</span>
+<span><strong>Magnificent Sound:</strong> Precision-engineered with the new Integrated Processor V1 and carbon fiber composite dome driver.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5 shrink-0">check_circle</span>
+<span><strong>Crystal clear hands-free calling:</strong> 4 beamforming microphones calibrated with AI noise isolation for pristine voice transmission.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5 shrink-0">check_circle</span>
+<span><strong>Up to 30-hour battery life:</strong> Quick charging grants 3 hours of playback with just a 3-minute USB-PD charge.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5 shrink-0">check_circle</span>
+<span><strong>Ultra-comfortable lightweight design:</strong> Newly developed soft-fit leather relieves ear pressure for all-day wearing ease.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5 shrink-0">check_circle</span>
+<span><strong>Multipoint connection:</strong> Effortlessly pair and switch between laptop, phone, and tablet simultaneously.</span>
+</li>
+</ul>
+</div>
+</section>
+<!-- RIGHT COLUMN: Purchase & Sticky Buy Box (25% desktop -> lg:col-span-3) -->
+<aside class="lg:col-span-3 sticky top-[110px] flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-md flex flex-col gap-space-md">
+<!-- Price display in Buy Box -->
+<div class="flex flex-col">
+<span class="text-body-sm font-body-sm text-on-surface-variant font-medium">Buy New:</span>
+<div class="flex items-baseline gap-space-xxs">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">₹</span>
+<span class="font-price-xl text-price-xl font-bold text-on-surface">26,990</span>
+<span class="font-title-sm text-title-sm text-on-surface">.00</span>
+</div>
+</div>
+<!-- Prime Delivery Assurance -->
+<div class="flex flex-col gap-space-xxs">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-sm text-title-sm font-bold text-primary">FREE Delivery</span>
+<span class="font-title-sm text-title-sm font-bold text-on-surface">Tomorrow, 11 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary">
+              Order within <span class="font-bold text-on-surface">4 hrs 12 mins</span>.
+            </p>
+</div>
+<!-- Location Selector Pin -->
+<div class="flex items-start gap-space-xs p-space-xs rounded-lg bg-surface-container-low text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">location_on</span>
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Deliver to Rahul - Bengaluru 560001</span>
+<button class="text-secondary font-semibold hover:underline text-left text-label-sm font-label-sm">Change location</button>
+</div>
+</div>
+<!-- In Stock Vivid Tag -->
+<div class="flex flex-col gap-space-xxs">
+<span class="font-headline-md text-headline-md font-bold text-tertiary">In Stock.</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+              Sold by <span class="text-on-surface font-semibold">Appario Retail</span> and Fulfilled by <span class="text-secondary font-semibold">ShopSphere</span>.
+            </span>
+</div>
+<!-- Quantity Dropdown -->
+<div class="flex items-center gap-space-sm">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="quantity-select">Quantity:</label>
+<div class="relative flex-1">
+<select class="w-full bg-surface-container-low text-on-surface font-title-sm text-title-sm py-space-xs px-space-sm rounded-lg appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-secondary-container" id="quantity-select">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2.5 pointer-events-none text-on-surface-variant text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Call To Action Buttons (Amazon Identity colors mapped to theme) -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full py-space-sm px-space-md rounded-full bg-secondary-container hover:bg-secondary-fixed-dim text-on-secondary-container font-title-md text-title-md font-bold shadow transition-all active:scale-[0.98] flex items-center justify-center gap-space-xs" id="add-to-cart-btn">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+              Add to Cart
+            </button>
+<button class="w-full py-space-sm px-space-md rounded-full bg-secondary text-on-secondary hover:opacity-95 font-title-md text-title-md font-bold shadow transition-all active:scale-[0.98] flex items-center justify-center gap-space-xs" id="buy-now-btn">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+              Buy Now
+            </button>
+</div>
+<!-- Trust Badges & Guarantee Matrix -->
+<div class="pt-space-xs flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-label-md font-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>
+<span>Secure transaction • 100% Purchase Protection</span>
+</div>
+<div class="grid grid-cols-4 gap-space-xxs text-center pt-space-xs">
+<div class="flex flex-col items-center gap-space-xxs">
+<span class="material-symbols-outlined text-[22px] text-on-surface">sync</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">7 Days Replacement</span>
+</div>
+<div class="flex flex-col items-center gap-space-xxs">
+<span class="material-symbols-outlined text-[22px] text-on-surface">local_shipping</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Free Delivery</span>
+</div>
+<div class="flex flex-col items-center gap-space-xxs">
+<span class="material-symbols-outlined text-[22px] text-on-surface">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">1 Year Warranty</span>
+</div>
+<div class="flex flex-col items-center gap-space-xxs">
+<span class="material-symbols-outlined text-[22px] text-on-surface">military_tech</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Top Brand</span>
+</div>
+</div>
+</div>
+<!-- Add to Wishlist Dropdown Button -->
+<div class="pt-space-xs">
+<button class="w-full py-space-xs px-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container font-label-md text-label-md text-on-surface transition-colors flex items-center justify-between">
+<span>Add to Wish List</span>
+<span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+</button>
+</div>
+</div>
+<!-- Gifting Option Pill -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-sm flex items-center gap-space-sm text-body-sm font-body-sm">
+<input class="rounded w-4 h-4 text-secondary focus:ring-secondary-container" id="gift-opt" type="checkbox"/>
+<label class="text-on-surface" for="gift-opt">Add gift options at checkout</label>
+</div>
+</aside>
+</div>
+<!-- CROSS-SELL BUNDLE: Frequently Bought Together -->
+<section class="mt-space-xl bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold mb-space-md flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[22px] text-secondary">join_inner</span>
+        Frequently Bought Together
+      </h2>
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg">
+<!-- Products Trio Display -->
+<div class="flex flex-wrap items-center gap-space-md">
+<!-- Item 1: Main Product -->
+<div class="flex items-center gap-space-sm">
+<div class="w-24 h-24 bg-surface-container-low p-space-xs rounded-xl flex items-center justify-center">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="Sony WH-1000XM5 wireless active noise canceling headphones product shot Midnight Black clean white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbxtBwvm3x2hWJMfC7NGrU0n8LqCY2rLhtDT2erqUM2srHVIFmH7cY6DG5On0fhZYX5T_1xMc9LB3BUaNNVD_Wq4smCYb0nvJ2H3hccHMUHf_8NgZSXx-nzPxkSFLCzMlm-0ZZ3irIl67FpeqMIFg3ZBv66RgJkdXK0e50gO4oLdO8vNdqC2lumidMFrGQVNQEGi49XdBVeKfdxPSEQXPBClnCzND87g67S5Q6wnU"/>
+</div>
+<div class="flex flex-col max-w-[160px]">
+<span class="font-title-sm text-title-sm font-semibold text-on-surface line-clamp-2">This item: Sony WH-1000XM5</span>
+<span class="font-price-md text-price-md font-bold text-on-surface mt-space-xxs">₹26,990</span>
+</div>
+</div>
+<span class="text-headline-xl font-headline-xl text-outline-variant font-light">+</span>
+<!-- Item 2: Hard Travel Case -->
+<div class="flex items-center gap-space-sm">
+<div class="w-24 h-24 bg-surface-container-low p-space-xs rounded-xl flex items-center justify-center">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="Rigid EVA hard travel protective storage case with shockproof ballistic nylon exterior specifically custom molded for Sony WH-1000XM5 headphones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJv3gaS9G6Ahlv5H1xvsHmLYI0h1kT9NdFxbVOViuBS_WxO6jamc361ewjqF3mMH20UhXcJ2hXig8KM9UIU88gGZi2-fgEPWAHOXrtC9UY-BtNCTrDttY39F2B2X5IKnp-2n06tjBoJqA6thTaPqYh-Qj7Q2oSz2t0QAsbB8KRBQy943A7yBsoXWlaTQgwoAHshdNiuTCAKLXjxhSxYDx9uLXLDPQD4oDH1FPMcqw"/>
+</div>
+<div class="flex flex-col max-w-[160px]">
+<span class="font-title-sm text-title-sm font-semibold text-on-surface line-clamp-2">Rigid EVA Hard Shell Travel Case</span>
+<span class="font-price-md text-price-md font-bold text-on-surface mt-space-xxs">₹1,499</span>
+</div>
+</div>
+<span class="text-headline-xl font-headline-xl text-outline-variant font-light">+</span>
+<!-- Item 3: Stand with Charger -->
+<div class="flex items-center gap-space-sm">
+<div class="w-24 h-24 bg-surface-container-low p-space-xs rounded-xl flex items-center justify-center">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="Matte aluminum desk headphone stand with integrated dual USB-C high speed charging ports and anti-slip silicone weighted base" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr5pz-vHMgUCjw39LyEZckx8AftHYk6zpv7T3BGUJAlSJvaDxZcIJruq2-vUNUaXa7gFwJ8GuraiRPq4h0U6BgBMs2JufP6_VTYg2cRDXc_OWZateNY0wjjBiddZ6gQutw5VaeB_sTT2MCn77n_1ZVQoUrWs70jFjggoVslhgJKwkZqVY20RIQuPvBkYYFyUC8Xldey5si07OCZIKVT8CeiWEeTLoMOErDhMFe7PM"/>
+</div>
+<div class="flex flex-col max-w-[160px]">
+<span class="font-title-sm text-title-sm font-semibold text-on-surface line-clamp-2">Aluminum Stand with Dual USB Hub</span>
+<span class="font-price-md text-price-md font-bold text-on-surface mt-space-xxs">₹1,199</span>
+</div>
+</div>
+</div>
+<!-- Bundle Conversion Action Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs w-full lg:w-80 shadow-sm shrink-0">
+<div class="flex items-baseline justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant">Total Bundle Price:</span>
+<div class="flex items-baseline gap-space-xxs">
+<span class="font-title-sm text-title-sm font-bold text-on-surface">₹</span>
+<span class="font-price-xl text-price-xl font-bold text-on-surface">29,688</span>
+<span class="font-title-sm text-title-sm font-bold text-on-surface">.00</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Saved ₹950 with multi-item bundle discount</span>
+<button class="mt-space-xs w-full py-space-sm px-space-md rounded-full bg-secondary-container hover:bg-secondary-fixed-dim text-on-secondary-container font-title-sm text-title-sm font-bold shadow transition-all">
+            Add all three to Cart
+          </button>
+</div>
+</div>
+</section>
+<!-- TECHNICAL SPECIFICATIONS GRID -->
+<section class="mt-space-xl bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold mb-space-md flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[22px] text-secondary">tune</span>
+        Technical Details &amp; Specifications
+      </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-space-xl gap-y-space-xs">
+<div class="flex items-center justify-between py-space-xs px-space-sm rounded-lg bg-surface-container-low text-body-sm font-body-sm">
+<span class="text-on-surface-variant font-medium">Brand</span>
+<span class="text-on-surface font-semibold">Sony</span>
+</div>
+<div class="flex items-center justify-between py-space-xs px-space-sm rounded-lg bg-surface-container-low text-body-sm font-body-sm">
+<span class="text-on-surface-variant font-medium">Model Name</span>
+<span class="text-on-surface font-semibold">WH-1000XM5</span>
+</div>
+<div class="flex items-center justify-between py-space-xs px-space-sm rounded-lg bg-surface-container-low text-body-sm font-body-sm">
+<span class="text-on-surface-variant font-medium">Color</span>
+<span class="text-on-surface font-semibold">Midnight Black</span>
+</div>
+<div class="flex items-center justify-between py-space-xs px-space-sm rounded-lg bg-surface-container-low text-body-sm font-body-sm">
+<span class="text-on-surface-variant font-medium">Headphones Form Factor</span>
+<span class="text-on-surface font-semibold">Over-Ear Closed Back</span>
+</div>
+<div class="flex items-center justify-between py-space-xs px-space-sm rounded-lg bg-surface-container-low text-body-sm font-body-sm">
+<span class="text-on-surface-variant font-medium">Connectivity Technology</span>
+<span class="text-on-surface font-semibold">Bluetooth 5.2 / LDAC / 3.5mm Aux</span>
+</div>
+<div class="flex items-center justify-between py-space-xs px-space-sm rounded-lg bg-surface-container-low text-body-sm font-body-sm">
+<span class="text-on-surface-variant font-medium">Battery Average Life</span>
+<span class="text-on-surface font-semibold">30 Hours (ANC On) / 40 Hours (ANC Off)</span>
+</div>
+<div class="flex items-center justify-between py-space-xs px-space-sm rounded-lg bg-surface-container-low text-body-sm font-body-sm">
+<span class="text-on-surface-variant font-medium">Item Weight</span>
+<span class="text-on-surface font-semibold">250 Grams (Ultra-lightweight)</span>
+</div>
+<div class="flex items-center justify-between py-space-xs px-space-sm rounded-lg bg-surface-container-low text-body-sm font-body-sm">
+<span class="text-on-surface-variant font-medium">Included Components</span>
+<span class="text-on-surface font-semibold">Carrying Case, Connection Cable, USB Cable</span>
+</div>
+</div>
+</section>
+<!-- CUSTOMER REVIEWS & COMMUNITY SECTION -->
+<section class="mt-space-xl bg-surface-container-lowest p-space-lg rounded-xl shadow-sm" id="customer-reviews">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl">
+<!-- Left: Aggregated Ratings & Bars (lg:col-span-4) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Customer Reviews</h2>
+<div class="flex items-center gap-space-sm">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 0.5;">star_half</span>
+</div>
+<span class="font-headline-xl text-headline-xl font-bold text-on-surface">4.7 out of 5</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">14,892 verified global ratings</span>
+<!-- Rating Breakdown Progress Bars -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center gap-space-sm text-body-sm font-body-sm">
+<span class="w-12 text-secondary font-medium">5 star</span>
+<div class="flex-1 h-5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 78%;"></div>
+</div>
+<span class="w-10 text-right text-on-surface-variant font-medium">78%</span>
+</div>
+<div class="flex items-center gap-space-sm text-body-sm font-body-sm">
+<span class="w-12 text-secondary font-medium">4 star</span>
+<div class="flex-1 h-5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 14%;"></div>
+</div>
+<span class="w-10 text-right text-on-surface-variant font-medium">14%</span>
+</div>
+<div class="flex items-center gap-space-sm text-body-sm font-body-sm">
+<span class="w-12 text-secondary font-medium">3 star</span>
+<div class="flex-1 h-5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 4%;"></div>
+</div>
+<span class="w-10 text-right text-on-surface-variant font-medium">4%</span>
+</div>
+<div class="flex items-center gap-space-sm text-body-sm font-body-sm">
+<span class="w-12 text-secondary font-medium">2 star</span>
+<div class="flex-1 h-5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 2%;"></div>
+</div>
+<span class="w-10 text-right text-on-surface-variant font-medium">2%</span>
+</div>
+<div class="flex items-center gap-space-sm text-body-sm font-body-sm">
+<span class="w-12 text-secondary font-medium">1 star</span>
+<div class="flex-1 h-5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 2%;"></div>
+</div>
+<span class="w-10 text-right text-on-surface-variant font-medium">2%</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs mt-space-sm">
+<span class="font-title-sm text-title-sm font-bold text-on-surface">Review this product</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Share your genuine thoughts with fellow music lovers</p>
+<button class="mt-space-xs w-full py-space-xs px-space-md rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-title-sm text-title-sm font-semibold shadow-sm transition-colors">
+              Write a customer review
+            </button>
+</div>
+</div>
+<!-- Right: Real Customer Images Gallery & Review Cards (lg:col-span-8) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Customer Photos Strip -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-title-sm text-title-sm font-bold text-on-surface">Reviews with images</span>
+<div class="grid grid-cols-4 sm:grid-cols-6 gap-space-xs">
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden p-space-xxs">
+<img class="w-full h-full object-cover rounded" data-alt="Customer unboxing photo of Sony WH-1000XM5 headphones laying on a wooden coffee table showing packaging box and original cables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTFes8NZNaSGd2iYsVQHs7kNO2wrnsf6nG73XtyOsFSZM-wNr5R86hucEhEy0JaPUsWgR5OK0t_eTSQhGktZ1Ifwsl7svUXAQSoblWMzRcvUpMcOT3YpGi0qGX6lytxAGVvPxN6IM1A7wY-GerapF-p6lgiKBy91pT7BQ-jhWz9D_Ho_2Qc3fsKZt_uTI8bMtJzDmivlEWR9igiON0CZ7Lr1dKBXeLJM_olD1h3Hc"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden p-space-xxs">
+<img class="w-full h-full object-cover rounded" data-alt="Close up customer picture of Sony WH-1000XM5 soft leather earpad texture and headband hinge in ambient warm room light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRkJJCiDTwMVXD5GZtb9LEp-lhXgS1HcgC8gpn98UUZHhIhFWNziObDe16uufXiQX9yoUB5BYY_dOkMCZJgYqPxuc1ofeKeAEXxBKyeqR2R3DkMoxmXDocKJR5HVpl0-QFItkSae8dfz1qbrj7AmEXW-JwIFFFH5wXkTF6MnRmBqTkMqbqqCuWtas9f930MLEoVI2ZLvY7siJgzbuLUAD5VDd25cjL0JIV7o1XQ-g"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden p-space-xxs">
+<img class="w-full h-full object-cover rounded" data-alt="Sony WH-1000XM5 headphones resting on an executive office wooden work desk beside a silver laptop and coffee mug" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5MNyO8Vb7opeAtTnfzZ_CQha4H4_mBcT0jOqZkkazbzxEfndP7DYjVxCgcOqITAGntvhcMJjjkv5U0RO6mgHxDm7R-ylPOv9cv_Lx3h_HSG4twTKVx9t8_nSa-CyFwFZ3lc27NOwWozJCA2Tte3LOWqI6ycY4D04UdiTENL0fEOsO2XMADDQIUHvynSUWeU0n56En0wa2qT4S4JMdXRZ_-kgLy3OTxomZIV7O96Q"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden p-space-xxs">
+<img class="w-full h-full object-cover rounded" data-alt="Customer holding Sony WH-1000XM5 carrying case open in hands showcasing travel convenience and sleek slim build" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs9Evtf1_TYLv4CflkElKih3UiGAChlsgIDaEu8i2-hDD0zgtZIB_fQS1-B_xZBag7KLKU6ClThyZX-ktqm5-Ko825iX-3ERG6I1U2vPDCQYzNN_-Dw5QytmRjh4JsKQMrO421ha2-FnYJeMhFmZ7x2WpMbR6zMRpk6BvbP0E3zrxZqnhIZCXma0G6nBxCOuuW358HS65eSNOYCEDp2oQbZA8TD9BEVaTxoJui-Rg"/>
+</div>
+</div>
+</div>
+<!-- Review 1 -->
+<article class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center font-bold text-secondary text-label-md">
+                AK
+              </div>
+<span class="font-title-sm text-title-sm font-bold text-on-surface">Ananya K.</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-title-sm text-title-sm font-bold text-on-surface">Unmatched Active Noise Cancellation for Flights!</span>
+</div>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface-variant">
+<span>Reviewed in India on 12 November 2024</span>
+<span>•</span>
+<span class="text-tertiary font-bold flex items-center gap-space-xxs">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                Verified Purchase
+              </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed mt-space-xxs">
+              Upgraded from XM3 to XM5 and the difference in ANC intelligence is mindblowing. Cabin engine drone on my recent 6-hour flight vanished entirely. Call clarity with the 4 beamforming mics is crystal clear even in noisy Bengaluru airport terminals.
+            </p>
+<div class="flex items-center gap-space-md pt-space-xs text-body-sm font-body-sm text-on-surface-variant">
+<span>248 people found this helpful</span>
+<button class="px-space-md py-space-xxs rounded bg-surface-container-lowest hover:bg-surface-container font-medium text-on-surface shadow-sm">Helpful</button>
+</div>
+</article>
+<!-- Review 2 -->
+<article class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary text-label-md">
+                VS
+              </div>
+<span class="font-title-sm text-title-sm font-bold text-on-surface">Vikram S.</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-title-sm text-title-sm font-bold text-on-surface">Battery life truly lives up to 30 hours!</span>
+</div>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface-variant">
+<span>Reviewed in India on 28 October 2024</span>
+<span>•</span>
+<span class="text-tertiary font-bold flex items-center gap-space-xxs">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                Verified Purchase
+              </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed mt-space-xxs">
+              The lightweight 250g body makes a huge difference over 8-hour coding sessions. Multipoint connectivity connects instantly between my MacBook Pro and iPhone with zero stutters. Fast charging gives me 3 solid hours of play with just 3 minutes of USB-PD charging.
+            </p>
+<div class="flex items-center gap-space-md pt-space-xs text-body-sm font-body-sm text-on-surface-variant">
+<span>112 people found this helpful</span>
+<button class="px-space-md py-space-xxs rounded bg-surface-container-lowest hover:bg-surface-container font-medium text-on-surface shadow-sm">Helpful</button>
+</div>
+</article>
+<!-- Review 3 -->
+<article class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 flex items-center justify-center font-bold text-secondary-container text-label-md">
+                PR
+              </div>
+<span class="font-title-sm text-title-sm font-bold text-on-surface">Pooja R.</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+</div>
+<span class="font-title-sm text-title-sm font-bold text-on-surface">Pristine audio resolution, LDAC is phenomenal</span>
+</div>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface-variant">
+<span>Reviewed in India on 15 September 2024</span>
+<span>•</span>
+<span class="text-tertiary font-bold flex items-center gap-space-xxs">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                Verified Purchase
+              </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed mt-space-xxs">
+              Soundstage is noticeably wider than previous iterations. Acoustic instruments and female vocals are rendered with immaculate separation thanks to the carbon-fiber composite driver. Midnight Black finish is subtly elegant.
+            </p>
+<div class="flex items-center gap-space-md pt-space-xs text-body-sm font-body-sm text-on-surface-variant">
+<span>89 people found this helpful</span>
+<button class="px-space-md py-space-xxs rounded bg-surface-container-lowest hover:bg-surface-container font-medium text-on-surface shadow-sm">Helpful</button>
+</div>
+</article>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- Interactive Client-side Script for Gallery & Swatches -->
+<script>
+  // Thumbnail switching logic
+  const thumbs = document.querySelectorAll('.gallery-thumb');
+  const mainImg = document.getElementById('main-product-img');
+
+  thumbs.forEach((thumb) => {
+    thumb.addEventListener('mouseenter', () => {
+      thumbs.forEach(t => t.classList.remove('bg-surface-container-high', 'outline', 'outline-2', 'outline-secondary-container'));
+      thumb.classList.add('bg-surface-container-high', 'outline', 'outline-2', 'outline-secondary-container');
+      const thumbImg = thumb.querySelector('img');
+      if (thumbImg && mainImg) {
+        mainImg.setAttribute('data-alt', thumbImg.getAttribute('data-alt') || '');
+      }
+    });
+  });
+
+  // Color variant selector logic
+  const colorBtns = document.querySelectorAll('.color-btn');
+  const colorLabel = document.getElementById('selected-color-label');
+
+  colorBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      colorBtns.forEach(b => {
+        b.classList.remove('bg-surface-container-high', 'outline', 'outline-2', 'outline-secondary-container');
+        b.classList.add('bg-surface-container-low');
+      });
+      btn.classList.remove('bg-surface-container-low');
+      btn.classList.add('bg-surface-container-high', 'outline', 'outline-2', 'outline-secondary-container');
+      const selectedColor = btn.getAttribute('data-color');
+      if (colorLabel && selectedColor) {
+        colorLabel.textContent = selectedColor;
+      }
+    });
+  });
+
+  // Add to cart micro-feedback
+  const addToCartBtn = document.getElementById('add-to-cart-btn');
+  if (addToCartBtn) {
+    addToCartBtn.addEventListener('click', () => {
+      const origText = addToCartBtn.innerHTML;
+      addToCartBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span> Added to Cart!';
+      addToCartBtn.classList.add('bg-tertiary-container');
+      setTimeout(() => {
+        addToCartBtn.innerHTML = origText;
+        addToCartBtn.classList.remove('bg-tertiary-container');
+      }, 2000);
+    });
+  }
+</script></main><footer class="w-full bg-inverse-surface text-inverse-on-surface"><a class="block w-full bg-surface-tint/30 hover:bg-surface-tint/40 py-space-md text-center font-label-md text-label-md text-inverse-on-surface transition-colors" href="#">Back to top</a><div class="max-w-[1500px] mx-auto px-space-xl lg:px-space-2xl py-space-2xl"><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-2xl text-left"><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md font-bold text-on-primary mb-space-xs">Get to Know Us</h3><nav class="flex flex-col gap-space-xs" data-active-classes="text-on-primary font-semibold"><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="about-shopsphere" href="#">About ShopSphere</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="careers" href="#">Careers</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="press-releases" href="#">Press Releases</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="shopsphere-science" href="#">ShopSphere Science</a></nav></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md font-bold text-on-primary mb-space-xs">Connect with Us</h3><nav class="flex flex-col gap-space-xs" data-active-classes="text-on-primary font-semibold"><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="community" href="#">Community Hub</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="creator-network" href="#">Creator Network</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="seller-forums" href="#">Seller Forums</a></nav></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md font-bold text-on-primary mb-space-xs">Make Money with Us</h3><nav class="flex flex-col gap-space-xs" data-active-classes="text-on-primary font-semibold"><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="sell-on-shopsphere" href="#">Sell on ShopSphere</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="protect-build-brand" href="#">Protect and Build Your Brand</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="global-selling" href="#">Global Selling</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="fulfillment-by-shopsphere" href="#">Fulfillment by ShopSphere</a></nav></div><div class="flex flex-col gap-space-sm"><h3 class="font-title-md text-title-md font-bold text-on-primary mb-space-xs">Let Us Help You</h3><nav class="flex flex-col gap-space-xs" data-active-classes="text-on-primary font-semibold"><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="account-settings" href="#">Your Account</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="returns-centre" href="#">Returns Centre</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="purchase-protection" href="#">100% Purchase Protection</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="app-download" href="#">ShopSphere App Download</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-on-primary transition-colors" data-path="customer-service" href="#">Help Center</a></nav></div></div></div><div class="w-full bg-primary-container py-space-xl"><div class="max-w-[1500px] mx-auto px-space-md lg:px-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-xs" data-path="home" href="#"><img alt="ShopSphere Brand Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCVF_KWw56LzMMSlENPqWbYGE2O-rDvV2032bJG_jUpf9oT7PG-BJwiFvy003-lulftKqNAAzs5d3Tb2_Nij6bEZTA1AasqgGGsQmWhphnxr7ci9eCgN8TIazgAw0SBfRtJ46IUKQimcuCA9pMXdGqelhby674iBd_8ZI71h--fJxWE8wwCz2nRVNvXFQtKzc-wSTPjaXsCflYYA-NhnGqh4aq3C8dYo60_r1n4IqQh"/><span class="font-headline-md text-headline-md tracking-tight text-on-primary">ShopSphere<span class="font-label-sm text-label-sm text-secondary-container ml-space-xxs font-bold">.in</span></span></a><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded bg-surface-container-high/10 text-on-primary font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">language</span><span>India (₹ INR)</span></div></div><div class="flex flex-wrap items-center justify-center gap-space-md font-label-sm text-label-sm text-outline-variant"><a class="hover:text-on-primary transition-colors" data-path="conditions-of-use" href="#">Conditions of Use</a><a class="hover:text-on-primary transition-colors" data-path="privacy-notice" href="#">Privacy Notice</a><a class="hover:text-on-primary transition-colors" data-path="interest-based-ads" href="#">Interest-Based Ads</a><span>© 2025 ShopSphere.in, Inc. or its affiliates</span></div></div></div></footer></body></html>
