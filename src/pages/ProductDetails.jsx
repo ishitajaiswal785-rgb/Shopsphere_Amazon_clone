@@ -484,43 +484,32 @@ export default function ProductDetails() {
 
             {/* Written reviews */}
             <div className="md:col-span-8 space-y-6">
-              {[
-                {
-                  author: "Aditya Nair",
-                  rating: 5,
-                  title: "Exceptional sound quality and unmatched noise cancellation!",
-                  date: "Reviewed in India on 28 October 2026",
-                  verified: true,
-                  comment: "I have been using this daily for work and music. The noise cancellation creates complete silence even in crowded cafes or flights. Battery life easily lasts 3 full days. Worth every rupee!"
-                },
-                {
-                  author: "Pooja Verma",
-                  rating: 5,
-                  title: "Premium finish and comfortable for all-day wearing",
-                  date: "Reviewed in India on 15 September 2026",
-                  verified: true,
-                  comment: "Extremely lightweight and doesn't squeeze the ears. Multipoint Bluetooth seamlessly connects between my MacBook and smartphone. Fast delivery by ShopSphere was a great bonus."
-                }
-              ].map((rev, idx) => (
-                <div key={idx} className="border-b border-gray-100 pb-5 space-y-1.5 text-xs">
-                  <div className="font-semibold text-gray-900">{rev.author}</div>
-                  <div className="flex items-center gap-2">
-                    <div className="flex text-amber-400">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className={`w-3.5 h-3.5 ${i < rev.rating ? 'fill-amber-400 text-amber-400' : 'text-gray-300'}`} />
-                      ))}
+              {product.reviews && product.reviews.length > 0 ? (
+                product.reviews.map((rev, idx) => (
+                  <div key={idx} className="border-b border-gray-100 pb-5 space-y-1.5 text-xs">
+                    <div className="font-semibold text-gray-900">{rev.author}</div>
+                    <div className="flex items-center gap-2">
+                      <div className="flex text-amber-400">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className={`w-3.5 h-3.5 ${i < rev.rating ? 'fill-amber-400 text-amber-400' : 'text-gray-300'}`} />
+                        ))}
+                      </div>
+                      <span className="font-bold text-gray-900">{rev.title}</span>
                     </div>
-                    <span className="font-bold text-gray-900">{rev.title}</span>
+                    <div className="text-gray-400 text-[11px]">{rev.date}</div>
+                    {rev.verified && (
+                      <div className="text-amber-800 font-semibold text-[11px]">
+                        Verified Purchase
+                      </div>
+                    )}
+                    <p className="text-gray-700 leading-relaxed pt-1">{rev.comment}</p>
                   </div>
-                  <div className="text-gray-400 text-[11px]">{rev.date}</div>
-                  {rev.verified && (
-                    <div className="text-amber-800 font-semibold text-[11px]">
-                      Verified Purchase
-                    </div>
-                  )}
-                  <p className="text-gray-700 leading-relaxed pt-1">{rev.comment}</p>
+                ))
+              ) : (
+                <div className="text-gray-500 text-sm py-4">
+                  No customer reviews yet for this product.
                 </div>
-              ))}
+              )}
             </div>
 
           </div>
